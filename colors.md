@@ -1,0 +1,30 @@
+MY SELECTION
+
+background-color-one = 
+background-color-one = 
+background-color-one = 
+background-color-one = 
+
+highlight-color-one = #BC7FF5
+highlight-color-two = #957FF5
+highlight-color-three = #8EBCF5
+highlight-color-four = #8998F5
+highlight-color-five = #E48CF5
+highlight-color-six = #D8D1F5
+
+
+
+
+GITHUB THEME COLORS
+
+green = rgb(117,201,139)
+purple = rgb(136,114,183)
+blue = rgb(148,188,236)
+off-white = rgb(225,228,232)
+
+
+dark_grey = rgb(31,36,40)
+less_dark_grey = rgb(36,41,46)
+
+github_dark_grey = rgb(13,17,24)
+github_less dark_grey = rgb(21,27,34)
