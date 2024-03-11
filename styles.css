@@ -1,0 +1,66 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+#firstPage {
+    height: 100vh;
+    background-color: aqua;
+}
+
+#secondPage {
+    height: 100vh;
+    width: 100%;
+    background-color: yellow;
+}
+
+#thirdPage {
+    height: 100vh;
+    width: 100%;
+    background-color: blue;
+}
+
+#fourthPage {
+    height: 100vh;
+    width: 100%;
+    background-color: blueviolet;
+}
+
+.navbar {
+    height: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+}
+
+.flex-elements {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    height: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
