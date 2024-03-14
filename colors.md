@@ -27,4 +27,4 @@ dark_grey = rgb(31,36,40)
 less_dark_grey = rgb(36,41,46)
 
 github_dark_grey = rgb(13,17,24)
-github_less dark_grey = rgb(21,27,34)
+github_highlight_dark_grey = rgb(21,27,34)

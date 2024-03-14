@@ -1,103 +1,107 @@
 body {
-    color: white; /* Changes the text color to white */
+    color: black; /* Changes the text color to white */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
-body, html {
+html {
     margin: 0;
     padding: 0;
-    height: 100%;
-  }
+}
+
+section {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
 
 #firstPage {
-    height: 100vh;
-    background-color: rgb(13,17,24);
+    background-color: whitesmoke
 }
 
 #secondPage {
-    height: 100vh;
-    width: 100%;
-    background-color: rgb(21,27,34)
+    background-color: whitesmoke
 }
 
 #thirdPage {
-    height: 100vh;
-    width: 100%;
-    background-color: rgb(13,17,24);
+    background-color: whitesmoke
 }
 
 #fourthPage {
-    height: 100vh;
-    width: 100%;
-    background-color: rgb(21,27,34)
+    background-color: whitesmoke
 }
 
-.navbar {
+  .navbar {
     height: 5%;
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     position: fixed;
     width: 100%;
-    background-color: rgb(21,27,34);
-}
+    background-color: white;
+  }
 
-.navbar-container {
+  .navbar-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 50%;
-}
+  }
 
-.flex-elements {
+  .flex-elements {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+  }
 
-footer {
+  footer {
     height: 5%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(13,17,24);
-}
+    background-color: white;
+  }
 
-.footer-container {
+  .footer-container {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 50%;
-}
+  }
 
-.centered-container {
+  .centered-container {
     width: 60%;
     height: 30%
-}
+  }
 
 
-/* TEXT STYLING */
-a {
+  /* TEXT STYLING */
+  a {
     color: white;
     text-decoration: none;
   }
 
-.text-color-one {
+  .text-color-one {
     color: #BC7FF5;
-}
+  }
 
-.text-color-two {
+  .text-color-two {
     color: #957FF5;
-}
+  }
 
-.text-color-three {
+  .text-color-three {
     color: #8EBCF5;
-}
+  }
 
-.text-color-four {
+  .text-color-four {
     color: #E48CF5;
-}
+  }
 
-.text-color-five {
+  .text-color-five {
     color: #D8D1F5;
-}
+  }
