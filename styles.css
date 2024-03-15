@@ -11,8 +11,6 @@ html {
 }
 
 section {
-    width: 100vw;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,18 +19,32 @@ section {
 }
 
 #firstPage {
+  width: 100vw;
+  height: 100vh;
     background-color: whitesmoke
 }
 
 #secondPage {
-    background-color: whitesmoke
+  width: 100vw;
+  height: 100vh;
+    background-color: white
 }
 
 #thirdPage {
+  width: 100vw;
+  height: 100vh;
     background-color: whitesmoke
 }
 
 #fourthPage {
+  width: 100vw;
+  height: 100vh;
+    background-color: white
+}
+
+#fifthPage {
+  width: 100vw;
+  height: 20vh;
     background-color: whitesmoke
 }
 
@@ -104,4 +116,18 @@ section {
 
   .text-color-five {
     color: #D8D1F5;
+  }
+
+  .container {
+    border: 2px solid black;
+    text-align: center;
+  }
+
+
+  .border {
+    border: 2px solid blue;
+  }
+
+  .half_height {
+    height: 50%;
   }
