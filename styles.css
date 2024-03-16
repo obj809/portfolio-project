@@ -11,41 +11,73 @@ html {
 }
 
 section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
-#firstPage {
-  width: 100vw;
-  height: 100vh;
-    background-color: whitesmoke
+
+.firstPage {
+    background-color: whitesmoke;
+    height: 100vh;
 }
 
-#secondPage {
-  width: 100vw;
-  height: 100vh;
-    background-color: white
+
+
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .secondPage .container {
+      height: auto; /* Auto height for smaller screens */
+      background-color: yellow;
+    }
+
+  .thirdPage .container {
+      background-color: blue
+    }
+
+
+  }
+
+
+
+
+
+
+
+
+.secondPage {
+    min-height: 100vh;
 }
 
-#thirdPage {
-  width: 100vw;
-  height: 100vh;
-    background-color: whitesmoke
+.thirdPage {
+    background-color: whitesmoke;
+    min-height: 100vh;
 }
 
-#fourthPage {
-  width: 100vw;
-  height: 100vh;
-    background-color: white
+
+
+
+
+
+
+
+
+
+
+
+
+
+.fourthPage {
+    background-color: white;
+    height: 100vh;
 }
 
-#fifthPage {
-  width: 100vw;
-  height: 20vh;
-    background-color: whitesmoke
+.fifthPage {
+    background-color: whitesmoke;
+    height: 15vh;
 }
 
   .navbar {
@@ -128,8 +160,3 @@ section {
     border: 2px solid blue;
   }
 
-  .half_height {
-    height: 50%;
-  }
-
-  
