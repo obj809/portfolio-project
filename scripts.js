@@ -1,7 +1,5 @@
-import Typed from 'typed.js';
-
 let typed = new Typed(".auto-type", {
-    strings: ["backpacking", "filming", " rugby union", "reading", "creative design"],
+    strings: ["Travelling", "Making movies", "Playing Sports", "Reading", "Building projects", "Creative design"],
     typeSpeed: 150, 
     backSpeed: 150,
     loop: true
