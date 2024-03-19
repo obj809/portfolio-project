@@ -13,7 +13,7 @@
 body {
     margin: 0; 
     padding: 0; 
-    box-sizing: border-box;
+    box-sizing: -box;
 }
 
 html {
@@ -134,12 +134,12 @@ section {
   }
 
 
-  /* .border {
-    border: 3px solid rgb(225,228,232);
-  } */
+  .border {
+    border: 4px solid rgb(225,228,232);
+  }
 
   /* .container {
-    border: 1px solid black;
+    : 1px solid black;
   } */
 
 
@@ -161,11 +161,11 @@ section {
 
 /* ID FOR PAGE LINKS */
 
-#firstPage {}
-#secondPage {}
-#thirdPage {}
-#fourthPage {}
-#fifthPage {}
+#home {}
+#skills {}
+#projects {}
+#about {}
+#contact {}
 
 
 
