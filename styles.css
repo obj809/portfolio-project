@@ -134,9 +134,9 @@ section {
   }
 
 
-  .border {
+  /* .border {
     border: 3px solid rgb(225,228,232);
-  }
+  } */
 
   /* .container {
     border: 1px solid black;
@@ -172,15 +172,14 @@ section {
 /* ROUNDING OF PROJECT IMAGES */
 
 .img-rounded {
-  border-radius: 6px; /* Adjust the value to your 
-  preference */
+  border-radius: 6px;
   border: 1px solid rgb(225,228,232);
 }
 
 
 
 .project-div {
-  margin-bottom: 30px; /* Adjust as per your preference */
+  margin-bottom: 30px;
 }
 
 .project-title {
