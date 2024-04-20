@@ -32,6 +32,11 @@ section {
 .first_page {
     height: 100vh;
     background-color: rgb(36,41,46);
+    /* background-image: url('./static/light4.png'); */
+    background-size: cover; /* Cover the entire div */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+
 }
 
 @media (max-width: 768px) {
@@ -158,16 +163,6 @@ section {
 }
 
 
-/* ID FOR PAGE LINKS */
-
-#home {}
-#skills {}
-#projects {}
-#about {}
-#contact {}
-
-
-
 /* ROUNDING OF PROJECT IMAGES */
 
 .img-rounded {
@@ -193,4 +188,32 @@ section {
 
 .auto-type {
   color: #957FF5;
+}
+
+#nameTitle {
+  margin-top: 15px;
+}
+
+#jobTitle {
+  margin-top: 5px
+}
+
+#mediaTitle {
+  margin-top: 10px;
+}
+
+#projectTitleSpacing {
+  height: 40px;
+  width: 10px;
+}
+
+.project-div, .image-container {
+  opacity: 0;
+  transform: translateX(100px); /* Start from the right, hidden */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.project-div.active, .image-container.active {
+  opacity: 1;
+  transform: translateX(0); /* Move to original position */
 }

@@ -1,6 +1,6 @@
 MY CREATED PALETTE
 
-highlight-color-one = #BC7FF5
+highlight-color-one = #BC7FF5 
 highlight-color-two = #957FF5
 highlight-color-three = #8EBCF5
 highlight-color-four = #8998F5
@@ -30,10 +30,11 @@ CURRENT SELECTION
 dark_grey = rgb(31,36,40)
 less_dark_grey = rgb(36,41,46)
 
-primary-off-white = rgb(225,228,232);
+primary-off-white = rgb(225,228,232); (#e1e4e8) (platinum)
 *** potential change to = #D8D1F5
 
-highlight-color-one = #8998F5
-highlight-color-two = #E48CF5
-highlight-color-three = #8998F5
-highlight-color-four = #BC7FF5;
+highlight-color-one = #8998F5 (light cobalt blue)
+highlight-color-two = #E48CF5 (bright lilac)
+highlight-color-three = #BC7FF5 (lavender(floral))
+highlight-color-four = #957FF5 (medium purple)
+

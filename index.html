@@ -6,13 +6,13 @@
     <title>Portfolio Project</title>
     <link rel="normalize" href="./normalize.css">
     <link rel="stylesheet" href="./styles.css">
+    <!-- Link the Typed.js library -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js" defer></script>
     <script src="./scripts.js" defer></script>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Font Awesome Link -->
-    <script src="https://kit.fontawesome.com/f6ed034d6e.js" crossorigin="anonymous"></script>
-     <!-- Link the Typed.js library -->
-     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://kit.fontawesome.com/f6ed034d6e.js" crossorigin="anonymous" defer></script>
 
 </head>
 <body>
@@ -48,21 +48,26 @@
     </nav>
 
     <!-- LANDING PAGE -->
-    <section id="firstPage" class="first_page flex-elements">
+    <section id='home' id="firstPage" class="first_page flex-elements">
         <div class="col-12 container ">
             <div class="row container ">
+                <div class="col-md-6 container d-flex justify-content-center align-items-center ">
+                    <div class="rounded-circle overflow-hidden border" style="width: 200px; height: 200px;">
+                        <img src="./static/headshot.jpg" alt="My Headshot" class="img-fluid" style="width: 200px; height: 200px;">>
+                    </div>
+                </div>
                 <div class="col-8 container ">
-                    <h1 class="text-color-one ">Oliver Jenkins</h1>
+                    <h1 id='nameTitle' class="text-color-one ">Oliver Jenkins</h1>
                 </div>
             </div>
             <div class="row container ">
                 <div class="col-10 container ">
-                    <h4 class="text-color-two ">Junior Full-Stack Developer</h4>
+                    <h4 id='jobTitle' class="text-color-two ">Junior Full-Stack Developer</h4>
                 </div>
             </div>
 
             <div class="container ">
-                <div class="row justify-content-center ">
+                <div id='mediaTitle' class="row justify-content-center ">
                     <div class="col-lg-3 col-md-4 col-sm-6 ">
                         <div class="d-flex justify-content-around ">
                             <a href="https://www.linkedin.com/in/obj809/">
@@ -85,7 +90,7 @@
 
 
     <!-- SKILLS PAGE -->
-    <section id="secondPage" class="second_page flex-elements">
+    <section id='skills' id="secondPage" class="second_page flex-elements">
         <div class="container ">
             <div class="row ">
                 <div class="col-md-6 col-lg-3 ">
@@ -190,14 +195,15 @@
 
 
     <!-- PROJECT PAGE -->
-    <section id="thirdPage" class="third_page flex-elements">
+    <section id='projects' id="thirdPage" class="third_page flex-elements">
         <div class="container  project-title">
             <div class="row  project-div">
-                <div class="">
+                <div id="projectTitleSpacing"></div>
+                <div id="projectTitle">
                 <h1>Projects</h1>
                 </div>
             </div>
-            <div class="row  project-div">
+            <div class="row project-div">
                 <div class="col-md-6 col-12 container order-md-1 d-flex align-items-center justify-content-center ">
                     <div class="">
                         <h5><i><span class="text-color-three">imageForge</span> - Django Project</h5></i>
@@ -211,7 +217,7 @@
                     </a>
                 </div>
             </div>
-            <div class="row  project-div">
+            <div class="row project-div">
                 <div class="col-md-6 col-12 container order-md-1 d-flex align-items-center justify-content-center ">
                     <div class="">
                         <h5><i><span class="text-color-four">Real Estate API</span> - Flask Project</i></h5>
@@ -225,7 +231,7 @@
                     </a>
                 </div>
             </div>
-            <div class="row  project-div">
+            <div class="row project-div">
                 <div class="col-md-6 col-12 container order-md-1 d-flex align-items-center justify-content-center ">
                     <div class="">
                         <h5><i><span class="text-color-one">Fine-tuned Chatbot</span> - ChatGPT Model</i></h5>
@@ -239,7 +245,7 @@
                     </a>
                 </div>
             </div>
-            <div class="row  project-div">
+            <div class="row project-div">
                 <div class="col-md-6 col-12 container order-md-1 d-flex align-items-center justify-content-center ">
                     <div class="">
                     <h5><i><span class="text-color-two">Social Media App</span> - MERN Stack</i></h5>
@@ -264,14 +270,9 @@
 
 
     <!-- ABOUT ME PAGE -->
-    <section id="fourthPage" class="fourth_page flex-elements">
+    <section id='about' id="fourthPage" class="fourth_page flex-elements">
         <div class="col-12 container ">
             <div class="row container ">
-                <div class="col-md-6 container d-flex justify-content-center align-items-center ">
-                    <div class="rounded-circle overflow-hidden border" style="width: 250px; height: 250px;">
-                        <img src="./static/headshot.jpg" alt="My Headshot" class="img-fluid" style="width: 250px; height: 250px;">>
-                    </div>
-                </div>
                 <div class="col-md-6">
                     <br>
                     <p>Nice to meet you, I'm Oliver.</p> 
@@ -296,7 +297,7 @@
 
 
     <!-- CONTACT PAGE -->
-    <section id="fifthPage" class="fifth_page flex-elements">
+    <section id='contact' id="fifthPage" class="fifth_page flex-elements">
 
         <div class="container-fluid ">
             <div class="row justify-content-center ">
