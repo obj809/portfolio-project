@@ -1,9 +1,9 @@
-// let typed = new Typed(".auto-type", {
-//     strings: ["Travelling", "Making movies", "Playing sports", "Reading", "Building projects", "Creative design"],
-//     typeSpeed: 150, 
-//     backSpeed: 150,
-//     loop: true
-// })
+let typed = new Typed(".auto-type", {
+    strings: ["_"],
+    typeSpeed: 200,
+    backSpeed: 1000,
+    loop: true
+});
 
 document.addEventListener("scroll", function() {
     var projectDivs = document.querySelectorAll('.project-div');
@@ -27,3 +27,5 @@ document.addEventListener("scroll", function() {
         }
     });
 });
+
+// strings: ["Travelling", "Filming", "Playing sport", "Assorted reading", "Building projects", "Creative design"]

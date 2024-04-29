@@ -28,6 +28,10 @@ section {
   padding: 0;
 }
 
+.rounded-circle {
+  border: 1.5px solid whitesmoke;
+}
+
 
 .first_page {
     height: 100vh;
@@ -56,13 +60,14 @@ section {
 }
 
 .fourth_page {
-    height: 100vh;
+    height: 75vh;
     background-color: rgb(31,36,40);
 }
 
 .fifth_page {
-    height: 15vh;
+    height: 20vh;
     background-color: rgb(36,41,46);
+    border-top: 1px solid gray;
 }
 
   .navbar {
@@ -73,6 +78,7 @@ section {
     position: fixed;
     width: 100%;
     background-color: rgb(31,36,40);
+    border-bottom: 1px solid gray;
   }
 
   .navbar-container {
@@ -131,6 +137,10 @@ section {
     color: #957FF5;
   }
 
+  .text-color-five {
+    color: #fff724;
+  }
+
 
 
   .container {
@@ -141,6 +151,31 @@ section {
   .border {
     border: 4px solid rgb(225,228,232);
   }
+
+  .flex-box {
+    display: flex;
+    flex-direction: column; /* Align children side by side */
+    flex-wrap: nowrap;
+  }
+
+  .about-container {
+    height: 30%;
+    margin-bottom: 30px; /* Add bottom margin */
+  }
+
+  .interest-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+  }
+
+
+
+.auto-type {
+    white-space: nowrap;     /* Prevent the text from wrapping */
+}
+
 
   /* .container {
     : 1px solid black;
@@ -206,6 +241,7 @@ section {
   height: 40px;
   width: 10px;
 }
+
 
 .project-div, .image-container {
   opacity: 0;
