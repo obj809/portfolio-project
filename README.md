@@ -7,7 +7,7 @@ This repository contains the source code for my personal portfolio website, desi
 This project is deployed and can be viewed [here](https://cyberforge1.github.io/portfolio-project/).
 
 ## Screenshot
-![Portfolio Screenshot](screenshot-url-here)
+![Portfolio Screenshot](static/project-screenshot.png)
 
 ## Table of Contents
 - [Tech Stack](#tech-stack)
