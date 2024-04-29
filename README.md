@@ -4,7 +4,7 @@
 This repository contains the source code for my personal portfolio website, designed to showcase my skills and projects as a junior software developer. The site features a responsive design, applying best practices in HTML, CSS, and JavaScript.
 
 ## Deployment Link
-This project is deployed and can be viewed [here](#) (Please replace the hash with the actual URL).
+This project is deployed and can be viewed [here](https://cyberforge1.github.io/portfolio-project/).
 
 ## Screenshot
 ![Portfolio Screenshot](screenshot-url-here)
