@@ -1,3 +1,5 @@
+// scripts.js
+
 let typed = new Typed(".auto-type", {
     strings: ["_"],
     typeSpeed: 200,
@@ -29,3 +31,35 @@ document.addEventListener("scroll", function() {
 });
 
 // strings: ["Travelling", "Filming", "Playing sport", "Assorted reading", "Building projects", "Creative design"]
+
+
+// NavBar Hover
+
+document.querySelectorAll('.navbar-nav .nav-item').forEach(item => {
+    item.addEventListener('mouseenter', () => {
+        // Immediate previous sibling
+        if (item.previousElementSibling) {
+            item.previousElementSibling.classList.add('scale-small');
+            // Neighbor once removed on the left
+            if (item.previousElementSibling.previousElementSibling) {
+                item.previousElementSibling.previousElementSibling.classList.add('scale-smallest');
+            }
+        }
+        // Immediate next sibling
+        if (item.nextElementSibling) {
+            item.nextElementSibling.classList.add('scale-small');
+            // Neighbor once removed on the right
+            if (item.nextElementSibling.nextElementSibling) {
+                item.nextElementSibling.nextElementSibling.classList.add('scale-smallest');
+            }
+        }
+    });
+
+    item.addEventListener('mouseleave', () => {
+        // Remove 'scale-small' and 'scale-smallest' from all nav items on mouse leave
+        document.querySelectorAll('.navbar-nav .nav-item').forEach(navItem => {
+            navItem.classList.remove('scale-small');
+            navItem.classList.remove('scale-smallest');
+        });
+    });
+});

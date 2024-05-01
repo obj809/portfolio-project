@@ -1,3 +1,5 @@
+/* Styles.css */
+
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
@@ -52,16 +54,19 @@ section {
 .second_page {
     min-height: 100vh;
     background-color: rgb(31,36,40);
+    border-top: 1px solid gray;
 }
 
 .third_page {
     min-height: 100vh;
     background-color: rgb(36,41,46);
+    border-top: 1px solid gray;
 }
 
 .fourth_page {
     height: 70vh;
     background-color: rgb(31,36,40);
+    border-top: 1px solid gray;
 }
 
 .fifth_page {
@@ -122,7 +127,7 @@ section {
 
   /* TEXT STYLING */
   a {
-    color: white;
+    color: rgb(225,228,232);
     text-decoration: none;
   }
 
@@ -259,3 +264,42 @@ section {
   transform: translateX(0); /* Move to original position */
 }
 
+
+
+/* Navbar Hover */
+
+/* Scaling effect for nav items */
+.navbar-nav .nav-item {
+  transition: transform 0.3s ease;
+}
+
+.navbar-nav .nav-item:hover {
+  transform: scale(1.3); /* Larger scale for hovered item */
+}
+
+/* Immediate neighbors */
+.navbar-nav .nav-item.scale-small {
+  transform: scale(1.1); /* Smaller scale for immediate adjacent items */
+}
+
+/* Neighbors once removed */
+.navbar-nav .nav-item.scale-smallest {
+  transform: scale(1.05); /* Even smaller scale for neighbors once removed */
+}
+
+/* Define hover color changes for each class */
+.nav-link.color-one:hover {
+  color: #8998F5; /* Blue */
+}
+.nav-link.color-two:hover {
+  color: #E48CF5; /* Pink */
+}
+.nav-link.color-three:hover {
+  color: #BC7FF5; /* Light purple */
+}
+.nav-link.color-four:hover {
+  color: #957FF5; /* Dark purple */
+}
+.nav-link.color-five:hover {
+  color: #fff724; /* Yellow */
+}
