@@ -1,11 +1,78 @@
 // scripts.js
 
-let typed = new Typed(".auto-type", {
-    strings: ["_"],
-    typeSpeed: 200,
-    backSpeed: 1000,
-    loop: true
+// let typed = new Typed(".auto-type", {
+//     strings: ["_"],
+//     typeSpeed: 200,
+//     backSpeed: 1000,
+//     loop: true
+// });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    let typedInstance; // Declare a variable to hold the Typed.js instance
+
+    // Function to check if the "About Me" section is in the viewport
+    function isAboutMeVisible() {
+        const aboutMeSection = document.getElementById('about');
+        const rect = aboutMeSection.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+        );
+    }
+
+    // Function to initialize Typed.js when the "About Me" section is visible
+    function initTyped() {
+        typedInstance = new Typed("#typed-text", {
+            strings: ['<span class="text-color-off-white"><i>Nice to meet you, I\'m </i></span><span class="text-color-five"><i>Oliver.</i></span>'],
+            typeSpeed: 150,
+            backSpeed: 50,
+            loop: false,
+            contentType: 'html' // Specify content type as HTML
+        });
+    }
+
+
+    // Function to destroy Typed.js instance when the "About Me" section is not visible
+    function destroyTyped() {
+        if (typedInstance) {
+            typedInstance.destroy();
+            typedInstance = undefined; // Reset the variable
+        }
+    }
+
+    // Check if the "About Me" section is initially visible
+    if (isAboutMeVisible()) {
+        initTyped();
+    }
+
+    // Event listener for scrolling
+    document.addEventListener('scroll', function() {
+        if (isAboutMeVisible()) {
+            if (!typedInstance) {
+                initTyped();
+            }
+        } else {
+            destroyTyped();
+        }
+    });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 document.addEventListener("scroll", function() {
     var projectDivs = document.querySelectorAll('.project-div');
