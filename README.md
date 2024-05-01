@@ -44,6 +44,7 @@ Currently, there are no major issues. Minor responsiveness tweaks are needed to 
 
 ## Additions & Improvements
 - Addition of creative backgrounds to better align with the theme.
+- Addition of Github and Deployment icons in the project section
 - Continuous updates to ensure smooth responsive design across all devices.
 - Regular updates to the Skill and Project sections as new technologies are learned and new projects are completed.
 - Reformatting of the About Me section for better user engagement.
@@ -52,6 +53,8 @@ Currently, there are no major issues. Minor responsiveness tweaks are needed to 
 - Use of highlighted words in the text to align with the website's color scheme.
 - Alternating animation directions for project entries in the Project section.
 - Addition of a JavaScript game to interactively demonstrate skills with skill cards.
+
+
 
 ## Learning Highlights
 This project was a valuable opportunity to apply my knowledge in front-end development and to improve my proficiency with version control using Git.

@@ -63,3 +63,17 @@ document.querySelectorAll('.navbar-nav .nav-item').forEach(item => {
         });
     });
 });
+
+
+// Skills Title 
+
+document.addEventListener("scroll", function() {
+    var skillsTitle = document.querySelector('#skillsTitle');
+    var triggerHeight = window.innerHeight / 2;
+
+    if (window.scrollY + triggerHeight > skillsTitle.offsetTop) {
+        skillsTitle.classList.add('active');
+    } else {
+        skillsTitle.classList.remove('active');
+    }
+});

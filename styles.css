@@ -264,6 +264,12 @@ section {
   transform: translateX(0); /* Move to original position */
 }
 
+.project-link {
+  color: inherit; /* Inherits the color from its parent element */
+  text-decoration: none; /* Removes underline from links */
+}
+
+
 
 
 /* Navbar Hover */
@@ -302,4 +308,35 @@ section {
 }
 .nav-link.color-five:hover {
   color: #fff724; /* Yellow */
+}
+
+
+
+
+
+/* Skills Section Tile Magnification */
+
+.card {
+  background-color: rgb(31, 36, 40); /* Example background color */
+  border: none;
+  margin-bottom: 20px; /* Adds 20px space below each card */
+}
+
+
+/* Project Section Image Div Magnification */
+
+.image-container {
+  transition: transform 0.3s ease-in-out; /* Smooth transition for the transform property */
+  cursor: pointer; /* Changes the cursor to a pointer to indicate that the item is interactive */
+  overflow: hidden; /* Keeps the image from spilling out of the container when scaled */
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out; /* Ensures the image also transitions smoothly */
+}
+
+.image-container:hover {
+  transform: scale(1.05); /* Scales up the container */
 }
