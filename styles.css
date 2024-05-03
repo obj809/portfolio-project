@@ -58,30 +58,30 @@ section {
 }
 
 .third_page {
-    min-height: 100vh;
+    min-height: calc(100vh - 50px);
     background-color: rgb(36,41,46);
     border-top: 1px solid gray;
 }
 
 .fourth_page {
-    height: 70vh;
+    height: 65vh;
     background-color: rgb(31,36,40);
     border-top: 1px solid gray;
 }
 
 .fifth_page {
-    height: 20vh;
+    height: 230px;
     background-color: rgb(36,41,46);
     border-top: 1px solid gray;
     border-bottom: 1px solid gray;
 }
 
 .footer {
-  height: 5vh;
+  height: 60px;
 }
 
   .navbar {
-    height: 5vh;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -109,7 +109,6 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
   }
 
   .footer-container {
@@ -317,9 +316,17 @@ section {
 /* Skills Section Tile Magnification */
 
 .card {
-  background-color: rgb(31, 36, 40); /* Example background color */
-  border: none;
-  margin-bottom: 20px; /* Adds 20px space below each card */
+  border: 5px solid white;
+  margin-bottom: 25px;
+  transition: transform 0.3s ease; /* Smoothly animate the transform property */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Scale up the card to 110% of its original size */
+}
+
+.card-body {
+  background-color: rgb(36,41,46);
 }
 
 
@@ -339,4 +346,35 @@ section {
 
 .image-container:hover {
   transform: scale(1.05); /* Scales up the container */
+}
+
+
+/* Contact Icon Magnification */
+
+.container .fa:hover {
+  transform: scale(1.3);
+  transition: transform 0.3s ease;
+}
+
+.icon-spacing {
+  height: 10px;
+}
+
+.icon-spacing-2 {
+  height: 20px;
+}
+
+.project-icons {
+  display: flex;
+  justify-content: space-evenly;
+  width: 200px;
+}
+
+.project-text-div{
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  height: 110%;
+  justify-content: center;
+  align-items: center;
 }

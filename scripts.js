@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function initTyped() {
         typedInstance = new Typed("#typed-text", {
             strings: ['<span class="text-color-off-white"><i>Nice to meet you, I\'m </i></span><span class="text-color-five"><i>Oliver.</i></span>'],
-            typeSpeed: 150,
+            typeSpeed: 200,
             backSpeed: 50,
             loop: false,
             contentType: 'html' // Specify content type as HTML

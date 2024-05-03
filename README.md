@@ -43,7 +43,6 @@ Major design decisions include the use of a clean, simple color palette and a mo
 Currently, there are no major issues. Minor responsiveness tweaks are needed to enhance the mobile viewing experience.
 
 ## Additions & Improvements
-- Addition of creative backgrounds to better align with the theme.
 - Addition of Github and Deployment icons in the project section
 - Continuous updates to ensure smooth responsive design across all devices.
 - Regular updates to the Skill and Project sections as new technologies are learned and new projects are completed.
