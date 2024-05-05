@@ -217,11 +217,27 @@ section {
 
 
 .project-div {
-  margin-bottom: 30px;
+  margin-bottom: 5%;
+}
+
+
+.project-text-div{
+  margin-bottom: 0%;
 }
 
 .project-title {
-  margin-top: 30px;
+  margin-top: 60px;
+}
+
+.project-title-spacing {
+  height: 20px;
+}
+
+/* Media query for screens smaller than 768px (common breakpoint for tablets and mobile phones) */
+@media (max-width: 768px) {
+  .project-text-div, .image-container {
+    margin-bottom: 60px;  /* Adjust the value as needed */
+  }
 }
 
 
@@ -247,9 +263,10 @@ section {
 }
 
 #projectTitleSpacing {
-  height: 40px;
   width: 10px;
 }
+
+
 
 
 .project-div, .image-container {
@@ -367,7 +384,8 @@ section {
 .project-icons {
   display: flex;
   justify-content: space-evenly;
-  width: 200px;
+  width: 50%;
+  margin-left: 25%;
 }
 
 .project-text-div{
@@ -377,4 +395,10 @@ section {
   height: 110%;
   justify-content: center;
   align-items: center;
+}
+
+/* Custom FA Styling */
+
+.icon-container {
+  font-size: 20px;
 }
