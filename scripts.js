@@ -131,3 +131,14 @@ document.addEventListener("scroll", function() {
         skillsTitle.classList.remove('active');
     }
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const emailIcon = document.querySelector('.fa-envelope'); // Ensure this selects the correct element
+    const emailDialog = document.getElementById('emailDialog');
+
+    emailIcon.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the default mailto link behavior
+
+        emailDialog.showModal(); // Use showModal() if you want a modal dialog, or show() for a non-modal dialog
+    });
+});

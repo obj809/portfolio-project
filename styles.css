@@ -429,12 +429,51 @@ section {
 }
 
 
-@media (max-width: 768px) {
-  .container {
-    padding: 10px; /* Reduce padding or margins on smaller screens */
-  }
+.navbar {
+  padding: 0;
+  margin: 0; /* Make sure it covers the full width */
+}
+
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+
+
+  @media (max-width: 576px) {
+    .container {
+        padding: 10px; /* Reduce padding or margins on smaller screens */
+    }
+    .full-width {
+        width: 100%; /* Adjust widths for smaller screens */
+        box-sizing: border-box; /* Include padding and border in the element's width */
+    }
+    .navbar-nav {
+        width: 100%; /* Full width for nav items */
+    }
+    .nav-item {
+        text-align: center; /* Center-align the nav items */
+    }
+    .nav-link {
+        padding: 10px 15px; /* Adequate padding for clickable areas */
+    }
+}
+
+
+@media (min-width: 577px) and (max-width: 768px) {
   .full-width {
-    width: 100%; /* Adjust widths for smaller screens */
-    box-sizing: border-box; /* Include padding and border in the element's width */
+      width: 100%; /* Ensures elements are still full-width */
+      box-sizing: border-box; /* Include padding and border in the element's width */
+  }
+  .navbar-nav {
+      width: 100%; /* Ensures nav items take full width */
+  }
+  .nav-item {
+      text-align: center; /* Keeps text center-aligned */
+  }
+  .nav-link {
+      padding: 12px 15px; /* Slightly larger padding than on phones */
   }
 }
+

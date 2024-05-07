@@ -4,13 +4,7 @@
 
 - email display on icon click
 
-- effect for project divs to populate using an x translation
-
-
-
-
-
-
+- fix the navbar for tablet and mobile devices
 
 - fix linking location for the navbar links (landing slightly above page)
 
@@ -22,7 +16,7 @@
 
 - create pages that are viewport size minus the navbar height
 
-- create spacing in the project section
+- fix spacing
 
 - fix the js on the contact page
 
