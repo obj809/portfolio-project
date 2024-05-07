@@ -1,8 +1,30 @@
 
+
+- fix javascript contact page
+
+- fix the viewport size for mobile
+
+- finish contact page summary
+
+- rocket icon from projects section?
+
+
+
+
+
+
+
+- fix linking location for the navbar links (landing slightly above page)
+
+
+
+
+
+
+
 - create pages that are viewport size minus the navbar height
 
 - create spacing in the project section
-- add github and launch icons
 
 - fix the js on the contact page
 
@@ -20,4 +42,6 @@
 
 - increase the border on the skills cards?
 
-- custom font awesome sizes?
+- fix linking location for the navbar links (landing slightly above page)
+
+- rocket icon from projects section?

@@ -64,7 +64,7 @@ section {
 }
 
 .fourth_page {
-    height: 65vh;
+    height: 80vh;
     background-color: rgb(31,36,40);
     border-top: 1px solid gray;
 }
@@ -398,7 +398,26 @@ section {
 }
 
 /* Custom FA Styling */
-
 .icon-container {
   font-size: 20px;
+  transition: transform 0.3s ease; /* Smooth transition for transform changes */
+}
+
+.icon-container:hover {
+  transform: scale(1.2); /* Increase the size by 30% on hover */
+}
+
+
+/* Cursor Blinking Animation */
+.typed-cursor {
+  opacity: 1;
+}
+
+@keyframes slow-blink-animation {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.typed-cursor.slow {
+  animation: slow-blink-animation 1s infinite !important; /* Add !important to ensure this rule has higher specificity */
 }

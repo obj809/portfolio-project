@@ -1,19 +1,15 @@
 // scripts.js
 
-// let typed = new Typed(".auto-type", {
-//     strings: ["_"],
-//     typeSpeed: 200,
-//     backSpeed: 1000,
-//     loop: true
-// });
-
-
 document.addEventListener("DOMContentLoaded", function() {
     let typedInstance; // Declare a variable to hold the Typed.js instance
 
     // Function to check if the "About Me" section is in the viewport
     function isAboutMeVisible() {
         const aboutMeSection = document.getElementById('about');
+        if (!aboutMeSection) {
+            console.error('The "About Me" section could not be found in the DOM.');
+            return false;
+        }
         const rect = aboutMeSection.getBoundingClientRect();
         return (
             rect.top >= 0 &&
@@ -23,15 +19,27 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Function to initialize Typed.js when the "About Me" section is visible
     function initTyped() {
+        if (!document.querySelector("#typed-text")) {
+            console.error('The "typed-text" element could not be found in the DOM.');
+            return;
+        }
         typedInstance = new Typed("#typed-text", {
-            strings: ['<span class="text-color-off-white"><i>Nice to meet you, I\'m </i></span><span class="text-color-five"><i>Oliver.</i></span>'],
-            typeSpeed: 200,
+            strings: ['<span class="text-color-off-white">Nice to meet you, I\'m </span><span class="text-color-five">Oliver. </span>'],
+            typeSpeed: 100,
             backSpeed: 50,
             loop: false,
-            contentType: 'html' // Specify content type as HTML
+            contentType: 'html',
+            cursorChar: '_',  // Use underscore as the cursor
+            showCursor: true,
+            onComplete: function(self) {
+                let cursorElement = document.querySelector('.typed-cursor');
+                if (cursorElement) {
+                    cursorElement.classList.add('slow');
+                }
+            }
         });
     }
-
+    
 
     // Function to destroy Typed.js instance when the "About Me" section is not visible
     function destroyTyped() {
@@ -48,31 +56,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Event listener for scrolling
     document.addEventListener('scroll', function() {
-        if (isAboutMeVisible()) {
-            if (!typedInstance) {
-                initTyped();
-            }
-        } else {
+        const currentlyVisible = isAboutMeVisible();
+        if (currentlyVisible && !typedInstance) {
+            initTyped();
+        } else if (!currentlyVisible && typedInstance) {
             destroyTyped();
         }
     });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 document.addEventListener("scroll", function() {
     var projectDivs = document.querySelectorAll('.project-div');
@@ -81,7 +72,7 @@ document.addEventListener("scroll", function() {
     var triggerHeight = window.innerHeight / 2;
 
     projectDivs.forEach(function(div) {
-        if (window.scrollY + triggerHeight > div.offsetTop) {
+        if (div && window.scrollY + triggerHeight > div.offsetTop) {
             div.classList.add('active');
         } else {
             div.classList.remove('active');
@@ -89,18 +80,13 @@ document.addEventListener("scroll", function() {
     });
 
     imageContainers.forEach(function(container) {
-        if (window.scrollY + triggerHeight > container.offsetTop) {
+        if (container && window.scrollY + triggerHeight > container.offsetTop) {
             container.classList.add('active');
         } else {
             container.classList.remove('active');
         }
     });
 });
-
-// strings: ["Travelling", "Filming", "Playing sport", "Assorted reading", "Building projects", "Creative design"]
-
-
-// NavBar Hover
 
 document.querySelectorAll('.navbar-nav .nav-item').forEach(item => {
     item.addEventListener('mouseenter', () => {
@@ -131,11 +117,12 @@ document.querySelectorAll('.navbar-nav .nav-item').forEach(item => {
     });
 });
 
-
-// Skills Title 
-
 document.addEventListener("scroll", function() {
     var skillsTitle = document.querySelector('#skillsTitle');
+    if (!skillsTitle) {
+        console.error('The "skillsTitle" element could not be found in the DOM.');
+        return;
+    }
     var triggerHeight = window.innerHeight / 2;
 
     if (window.scrollY + triggerHeight > skillsTitle.offsetTop) {
