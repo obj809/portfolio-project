@@ -1,14 +1,10 @@
 
 
-- fix javascript contact page
-
-- fix the viewport size for mobile
-
 - finish contact page summary
 
-- rocket icon from projects section?
-
 - email display on icon click
+
+- effect for project divs to populate using an x translation
 
 
 

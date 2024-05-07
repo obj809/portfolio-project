@@ -61,6 +61,7 @@ section {
     min-height: calc(100vh - 50px);
     background-color: rgb(36,41,46);
     border-top: 1px solid gray;
+    overflow-x: hidden;
 }
 
 .fourth_page {
@@ -338,6 +339,11 @@ section {
   transition: transform 0.3s ease; /* Smoothly animate the transform property */
 }
 
+.skills-height-adjust{
+  height: 25px;
+}
+
+
 .card:hover {
   transform: scale(1.05); /* Scale up the card to 110% of its original size */
 }
@@ -420,4 +426,15 @@ section {
 
 .typed-cursor.slow {
   animation: slow-blink-animation 1s infinite !important; /* Add !important to ensure this rule has higher specificity */
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    padding: 10px; /* Reduce padding or margins on smaller screens */
+  }
+  .full-width {
+    width: 100%; /* Adjust widths for smaller screens */
+    box-sizing: border-box; /* Include padding and border in the element's width */
+  }
 }
