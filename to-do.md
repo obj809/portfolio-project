@@ -8,6 +8,8 @@
 
 - rocket icon from projects section?
 
+- email display on icon click
+
 
 
 
