@@ -481,8 +481,8 @@ section {
 
 
 #typed-skills-title {
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
 
 #typed-project-title {
@@ -494,5 +494,17 @@ section {
   height: 0;        /* No height to maintain layout flow */
   visibility: hidden; /* Make them invisible */
   position: relative; /* Relative positioning */
-  top: -60px;       /* Adjust this value based on your navbar's height */
+  top: -58px;       /* Adjust this value based on your navbar's height */
+}
+
+.section-title {
+  font-size: 40px;
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
+.contact-spacing {
+  margin-top: 40px;
 }

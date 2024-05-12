@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         new Typed("#typed-text", {
             strings: ['<span class="text-color-off-white">Nice to meet you, I\'m </span><span class="text-color-five">Oliver. </span>'],
-            typeSpeed: 80,
+            typeSpeed: 75,
             backSpeed: 50,
             loop: false,
             contentType: 'html',
@@ -77,7 +77,6 @@ document.addEventListener("scroll", function() {
         }
     });
 });
-
 
 document.querySelectorAll('.navbar-nav .nav-item').forEach(item => {
     item.addEventListener('mouseenter', () => {
