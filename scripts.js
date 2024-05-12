@@ -1,7 +1,7 @@
 // scripts.js
 
 document.addEventListener("DOMContentLoaded", function() {
-    let typedInstance; // Declare a variable to hold the Typed.js instance
+    let typedInitialized = false; // Flag to track if Typed has been initialized
 
     // Function to check if the "About Me" section is in the viewport
     function isAboutMeVisible() {
@@ -23,9 +23,9 @@ document.addEventListener("DOMContentLoaded", function() {
             console.error('The "typed-text" element could not be found in the DOM.');
             return;
         }
-        typedInstance = new Typed("#typed-text", {
+        new Typed("#typed-text", {
             strings: ['<span class="text-color-off-white">Nice to meet you, I\'m </span><span class="text-color-five">Oliver. </span>'],
-            typeSpeed: 100,
+            typeSpeed: 80,
             backSpeed: 50,
             loop: false,
             contentType: 'html',
@@ -38,31 +38,21 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             }
         });
+        typedInitialized = true; // Set the flag to true after initialization
     }
     
 
-    // Function to destroy Typed.js instance when the "About Me" section is not visible
-    function destroyTyped() {
-        if (typedInstance) {
-            typedInstance.destroy();
-            typedInstance = undefined; // Reset the variable
+    // Event listener for scrolling
+    document.addEventListener('scroll', function() {
+        if (isAboutMeVisible() && !typedInitialized) {
+            initTyped();
         }
-    }
+    });
 
-    // Check if the "About Me" section is initially visible
+    // Initialize Typed.js if "About Me" is initially visible
     if (isAboutMeVisible()) {
         initTyped();
     }
-
-    // Event listener for scrolling
-    document.addEventListener('scroll', function() {
-        const currentlyVisible = isAboutMeVisible();
-        if (currentlyVisible && !typedInstance) {
-            initTyped();
-        } else if (!currentlyVisible && typedInstance) {
-            destroyTyped();
-        }
-    });
 });
 
 document.addEventListener("scroll", function() {
