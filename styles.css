@@ -54,6 +54,7 @@ section {
     min-height: 100vh;
     background-color: rgb(31,36,40);
     border-top: 1px solid gray;
+    padding-top: 25px;
 }
 
 .third_page {
@@ -64,7 +65,7 @@ section {
 }
 
 .fourth_page {
-    height: 80vh;
+    height: 70vh;
     background-color: rgb(31,36,40);
     border-top: 1px solid gray;
 }
