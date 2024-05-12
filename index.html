@@ -30,16 +30,16 @@
                 <div class="col-md-8 ">
                     <ul class="navbar-nav justify-content-around">
                         <li class="nav-item">
-                            <a class="nav-link color-one" href="#home">Home</a>
+                            <a class="nav-link color-one" href="#home-anchor">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link color-two" href="#skills">Skills</a>
+                            <a class="nav-link color-two" href="#skills-anchor">Skills</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link color-three" href="#projects">Projects</a>
+                            <a class="nav-link color-three" href="#projects-anchor">Projects</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link color-four" href="#about">About Me</a>
+                            <a class="nav-link color-four" href="#about-anchor">About Me</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link color-five" href="#contact">Contact</a>
@@ -49,7 +49,7 @@
             </div>
         </div>
     </nav>
-
+    <div id="home-anchor" class="anchor"></div>
     <!-- LANDING PAGE -->
     <section id='home' id="firstPage" class="first_page flex-elements">
         <div class="col-12 container ">
@@ -89,11 +89,13 @@
                 </div>
             </div>
         </div>
-        <!-- Email Dialogue Box -->
+        <!-- Invisible anchor at the end of the home section --> 
         <dialog id="emailDialog">
             <p><span id="emailAddress">example@example.com</span></p>
         </dialog>
     </section>
+            <!-- Invisible anchor at the end of the skills section -->
+            <div id="skills-anchor" class="anchor"></div>
 
     
 
@@ -102,8 +104,12 @@
     <section id='skills' id="secondPage" class="second_page flex-elements">
         <div class="container">
         <!-- Skills Cards -->
+        <div class="row">
+            <div class="col-12 text-center"> <!-- This div will center your title -->
+                <h2 id="typed-skills-title">Software Skills</h2>
+            </div>
+        </div>
             <div class="row ">
-                <div class="skills-height-adjust"></div>
                 <div class="col-md-6 col-lg-3 ">
                     <div class="card aspect-ratio-square border">
                         <div class="card-body d-flex flex-column justify-content-center align-items-center">
@@ -235,16 +241,16 @@
             </div>
         </div>
     </section>
+    <!-- Invisible anchor at the end of the projects section -->
+    <div id="projects-anchor" class="anchor"></div>
 
 
     <!-- PROJECT PAGE -->
     <section id='projects' id="thirdPage" class="third_page flex-elements">
         <div class="container project-title">
             <div class="row  project-div">
-                <div id="projectTitleSpacing"></div>
                 <div id="projectTitle">
-                <h1 id="typed-project-title">My Projects</h1>
-                <div class="project-title-spacing"></div>
+                <h2 id="typed-project-title">Project Portfolio</h2>
                 </div>
             </div>
             <div class="row project-div">
@@ -353,6 +359,7 @@
             </div>
         </div>
     </section>
+    <div id="about-anchor" class="anchor"></div>
 
 
     <!-- ABOUT ME PAGE -->

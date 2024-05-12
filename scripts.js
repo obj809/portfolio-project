@@ -78,6 +78,7 @@ document.addEventListener("scroll", function() {
     });
 });
 
+
 document.querySelectorAll('.navbar-nav .nav-item').forEach(item => {
     item.addEventListener('mouseenter', () => {
         // Immediate previous sibling

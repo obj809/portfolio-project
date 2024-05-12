@@ -36,13 +36,12 @@ section {
 
 
 .first_page {
-    height: 100vh;
-    background-color: rgb(36,41,46);
-    background-image: url('./static/background3.png');
-    background-size: cover; /* Cover the entire div */
-    background-position: center; /* Center the background image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-
+  height: 100vh;
+  background-color: rgb(36,41,46);
+  background-image: url('./static/background3-cropped.png');
+  background-size: cover; /* Cover the entire div */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Do not repeat the image */
 }
 
 @media (max-width: 768px) {
@@ -219,19 +218,13 @@ section {
 
 .project-div {
   margin-bottom: 5%;
+  display: flex;
+  align-items: center;
 }
 
 
 .project-text-div{
   margin-bottom: 0%;
-}
-
-.project-title {
-  margin-top: 60px;
-}
-
-.project-title-spacing {
-  height: 20px;
 }
 
 /* Media query for screens smaller than 768px (common breakpoint for tablets and mobile phones) */
@@ -339,9 +332,6 @@ section {
   transition: transform 0.3s ease; /* Smoothly animate the transform property */
 }
 
-.skills-height-adjust{
-  height: 25px;
-}
 
 
 .card:hover {
@@ -487,4 +477,22 @@ section {
   width: 70px;
 
   overflow: visible;
+}
+
+
+#typed-skills-title {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#typed-project-title {
+  margin-top: 50px;
+}
+
+.anchor {
+  display: block;
+  height: 0;        /* No height to maintain layout flow */
+  visibility: hidden; /* Make them invisible */
+  position: relative; /* Relative positioning */
+  top: -60px;       /* Adjust this value based on your navbar's height */
 }
