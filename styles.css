@@ -384,7 +384,7 @@ section {
 }
 
 .icon-spacing-2 {
-  height: 20px;
+  height: 30px;
 }
 
 .project-icons {
@@ -477,3 +477,14 @@ section {
   }
 }
 
+
+.larger-font {
+  font-size: 18px;
+}
+
+.email-spacing {
+  height: 60px;
+  width: 70px;
+
+  overflow: visible;
+}
