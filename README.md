@@ -43,16 +43,10 @@ Major design decisions include the use of a clean, simple color palette and a mo
 Currently, there are no major issues. Minor responsiveness tweaks are needed to enhance the mobile viewing experience.
 
 ## Additions & Improvements
-- Addition of Github and Deployment icons in the project section
 - Continuous updates to ensure smooth responsive design across all devices.
 - Regular updates to the Skill and Project sections as new technologies are learned and new projects are completed.
-- Reformatting of the About Me section for better user engagement.
-- Enhancement of the Navbar with magnification effects.
-- Implementation of a JavaScript typing function in the About Me section.
-- Use of highlighted words in the text to align with the website's color scheme.
 - Alternating animation directions for project entries in the Project section.
 - Addition of a JavaScript game to interactively demonstrate skills with skill cards.
-
 
 
 ## Learning Highlights

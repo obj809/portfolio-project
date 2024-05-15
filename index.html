@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Project</title>
+    <title>Portfolio Website</title>
     <link rel="normalize" href="./normalize.css">
     <link rel="stylesheet" href="./styles.css">
     <!-- Link the Typed.js library -->
@@ -16,6 +16,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Font Awesome Link -->
     <script src="https://kit.fontawesome.com/f6ed034d6e.js" crossorigin="anonymous" defer></script>
+    <!-- Favicon Link -->
+    <!-- <link rel="icon" type="image/png" sizes="32x32" href="./static/favicon.ico"> -->
 
 </head>
 <body>
@@ -51,51 +53,52 @@
     </nav>
     <div id="home-anchor" class="anchor"></div>
     <!-- LANDING PAGE -->
-    <section id='home' id="firstPage" class="first_page flex-elements">
-        <div class="col-12 container ">
-            <div class="row container ">
-                <div class="col-md-6 container d-flex justify-content-center align-items-center ">
-                    <div class="rounded-circle test overflow-hidden" style="width: 200px; height: 200px;">
-                        <img src="./static/headshot.jpg" alt="My Headshot" class="img-fluid" style="width: 200px; height: 200px;">>
-                    </div>
-                </div>
-                <div class="col-8 container ">
-                    <h1 id='nameTitle' class="text-color-one ">Oliver Jenkins</h1>
+<section id='home' id="firstPage" class="first_page flex-elements">
+    <div class="col-12 container">
+        <div class="row container">
+            <div class="col-md-6 container d-flex justify-content-center align-items-center">
+                <div class="rounded-circle test overflow-hidden" style="width: 200px; height: 200px;">
+                    <img src="./static/headshot.jpg" alt="My Headshot" class="img-fluid" style="width: 200px; height: 200px;">
                 </div>
             </div>
-            <div class="row container ">
-                <div class="col-10 container ">
-                    <h4 id='jobTitle' class="text-color-two ">Junior Full-Stack Developer</h4>
-                </div>
+            <div class="col-8 container">
+                <h1 id='nameTitle' class="text-color-one">Oliver Jenkins</h1>
             </div>
+        </div>
+        <div class="row container">
+            <div class="col-10 container">
+                <h4 id='jobTitle' class="text-color-two">Junior Full-Stack Developer</h4>
+            </div>
+        </div>
 
-            <div class="container ">
-                <div id='mediaTitle' class="row justify-content-center ">
-                    <div class="col-lg-3 col-md-4 col-sm-6 ">
-                        <div class="d-flex justify-content-around ">
-                            <a href="https://www.linkedin.com/in/obj809/">
-                                <div class="icon-container"><i class="fa-brands fa-linkedin fa-2x"></i></div>
-                            </a>
-                            
-                            <a href="https://github.com/cyberforge1">
-                                <div class="icon-container"><i class="fab fa-github-square fa-2x"></i></div>
-                            </a>
-                            
-                            <a href="mailto:example@example.com">
-                                <div class="icon-container"><i class="fa-solid fa-envelope fa-2x"></i></div>
-                            </a>   
-                        </div>
+        <div class="container">
+            <div id='mediaTitle' class="row justify-content-center">
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="d-flex justify-content-around">
+                        <a href="https://www.linkedin.com/in/obj809/" target="_blank">
+                            <div class="icon-container"><i class="fa-brands fa-linkedin fa-2x"></i></div>
+                        </a>
+                        
+                        <a href="https://github.com/cyberforge1" target="_blank">
+                            <div class="icon-container"><i class="fab fa-github-square fa-2x"></i></div>
+                        </a>
+                        
+                        <a href="mailto:example@example.com">
+                            <div class="icon-container"><i class="fa-solid fa-envelope fa-2x"></i></div>
+                        </a>   
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Invisible anchor at the end of the home section --> 
-        <dialog id="emailDialog">
-            <p><span id="emailAddress">example@example.com</span></p>
-        </dialog>
-    </section>
-            <!-- Invisible anchor at the end of the skills section -->
-            <div id="skills-anchor" class="anchor"></div>
+    </div>
+    <!-- Invisible anchor at the end of the home section --> 
+    <dialog id="emailDialog">
+        <p><span id="emailAddress">example@example.com</span></p>
+    </dialog>
+</section>
+<!-- Invisible anchor at the end of the skills section -->
+<div id="skills-anchor" class="anchor"></div>
+
 
     
 
@@ -245,121 +248,122 @@
     <div id="projects-anchor" class="anchor"></div>
 
 
-    <!-- PROJECT PAGE -->
-    <section id='projects' id="thirdPage" class="third_page flex-elements">
-        <div class="container project-title">
-            <div class="row  project-div">
-                <div id="projectTitle">
+<!-- PROJECT PAGE -->
+<section id='projects' id="thirdPage" class="third_page flex-elements">
+    <div class="container project-title">
+        <div class="row project-div">
+            <div id="projectTitle">
                 <p class="section-title" id="typed-project-title"><i>Project Portfolio</i></p>
-                </div>
-            </div>
-            <div class="row project-div">
-                <!-- imageForge - Django Project -->
-                    <div class="col-md-6 col-12 container order-md-1 d-flex align-items-center justify-content-center project-text-div">
-                        <div class="">
-                            <h5><i><a href="https://github.com/cyberforge1/imageForge" target="_blank" target="_blank" class="project-link"><span class="text-color-three">imageForge</span> - Django Project</a></i></h5>
-                            <br>
-                            <p>A Django application that uses the OpenAI API to create unique artwork using the ChatGPT 3.5 Turbo and Dall•E 2 Models</p>
-                            <br>
-                            <div class="project-icons">
-                                <a href="https://github.com/cyberforge1">
-                                    <div class="icon-container"><i class="fab fa-github-square fa-2x"></i></div>
-                                </a>
-                                <a href="https://imageforgelive-e87a9f628780.herokuapp.com/">
-                                    <div class="icon-container">
-                                        <i class="fa-solid fa-link fa-2x"></i>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                <div class="col-md-4 col-12 container order-md-2 image-container ">
-                    <a href="https://github.com/cyberforge1/imageForge" target="_blank">
-                        <img src="./static/project-photos/imageforge.png" alt="imageForge Django App" class="img-fluid img-rounded">
-                    </a>
-                </div>
-            </div>
-            <div class="row project-div">
-                <!-- Google Books Search Engine - React Project -->
-                <div class="col-md-6 col-12 container order-md-1 d-flex align-items-center justify-content-center project-text-div">
-                    <div class="">
-                        <h5><i><a href="https://github.com/cyberforge1/google-books-api-search-engine" target="_blank" class="project-link"><span class="text-color-one">Google Books Search Engine</span> - React Project</a></i></h5>
-                        <br>
-                        <p>An API search engine that uses a React front-end to display data fetched from the Google Books database</p>
-                        <br>
-                            <div class="project-icons">
-                                <a href="https://github.com/cyberforge1">
-                                    <div class="icon-container"><i class="fab fa-github-square fa-2x"></i></div>
-                                </a>
-                                <a href="https://github.com/cyberforge1">
-                                    <div class="icon-container">
-                                        <i class="fa-solid fa-link fa-2x"></i>
-                                    </div>
-                                </a>
-                            </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-12 container order-md-2 image-container ">
-                    <a href="https://github.com/cyberforge1/google-books-api-search-engine" target="_blank">
-                        <img src="./project-screenshots/non-compressed/google-books-api-search-engine-screenshot.png" alt="Google Books API Search Engine" class="img-fluid img-rounded">
-                    </a>
-                </div>
-            </div>
-            <div class="row project-div">
-                <!-- React E-commerce Store - React & Firestore Project -->
-                    <div class="col-md-6 col-12 container order-md-1 d-flex align-items-center justify-content-center project-text-div">
-                        <div class="">
-                            <h5><i><a href="https://github.com/cyberforge1/react-ecommerce-store" target="_blank" class="project-link"><span class="text-color-four">React E-commerce Store</span> - React & Firestore Project</a></i></h5>
-                            <br>
-                            <p>A React E-Commerce Store utilizing Google Firestore for database management and React Router for navigation</p>
-                            <br>
-                            <div class="project-icons">
-                                <a href="https://github.com/cyberforge1">
-                                    <div class="icon-container"><i class="fab fa-github-square fa-2x"></i></div>
-                                </a>
-                                <a href="https://github.com/cyberforge1">
-                                    <div class="icon-container">
-                                        <i class="fa-solid fa-link fa-2x"></i>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                <div class="col-md-4 col-12 container order-md-2 image-container ">
-                    <a href="https://github.com/cyberforge1/react-ecommerce-store" target="_blank">
-                        <img src="./project-screenshots/non-compressed/react-ecommerce-screenshot.png" alt="React E-commerce Store" class="img-fluid img-rounded">
-                    </a>
-                </div>
-            </div>
-            <div class="row project-div">
-                <!-- PoetryGPT - TypeScript & Python Project -->
-                <div class="col-md-6 col-12 container order-md-1 d-flex align-items-center justify-content-center project-text-div">
-                    <div class="">
-                        <h5><i><a href="https://github.com/cyberforge1/chatGPTFineTuneModel" target="_blank" class="project-link"><span class="text-color-two">PoetryGPT</span> - TypeScript & Python Project</a></i></h5>
-                        <br>
-                        <p>A fine-tuned ChatGPT Model that responds to prompts with poetry, developed using Python and accessible through a UI build in React and Typescript</p>
-                        <br>
-                        <div class="project-icons">
-                            <a href="https://github.com/cyberforge1">
-                                <div class="icon-container"><i class="fab fa-github-square fa-2x"></i></div>
-                            </a>
-                            <a href="https://github.com/cyberforge1">
-                                <div class="icon-container">
-                                    <i class="fa-solid fa-link fa-2x"></i>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-12 container order-md-2 image-container ">
-                    <a href="https://github.com/cyberforge1/chatGPTFineTuneModel" target="_blank">
-                        <img src="./static/project-photos/chatgpt-fine-tune.png" alt="Fine Tuned ChatGPT" class="img-fluid img-rounded">
-                    </a>
-                </div>
             </div>
         </div>
-    </section>
-    <div id="about-anchor" class="anchor"></div>
+        <div class="row project-div">
+            <!-- imageForge - Django Project -->
+            <div class="col-md-6 col-12 container order-md-1 d-flex align-items-center justify-content-center project-text-div">
+                <div class="">
+                    <h5><i><a href="https://github.com/cyberforge1/imageForge" target="_blank" class="project-link"><span class="text-color-three">imageForge</span> - Django Project</a></i></h5>
+                    <br>
+                    <p>A Django application that uses the OpenAI API to create unique artwork using the ChatGPT 3.5 Turbo and Dall•E 2 Models</p>
+                    <br>
+                    <div class="project-icons">
+                        <a href="https://github.com/cyberforge1" target="_blank">
+                            <div class="icon-container"><i class="fab fa-github-square fa-2x"></i></div>
+                        </a>
+                        <a href="https://imageforgelive-e87a9f628780.herokuapp.com/" target="_blank">
+                            <div class="icon-container">
+                                <i class="fa-solid fa-link fa-2x"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-12 container order-md-2 image-container ">
+                <a href="https://imageforgelive-e87a9f628780.herokuapp.com/" target="_blank">
+                    <img src="./static/project-photos/imageforge.png" alt="imageForge Django App" class="img-fluid img-rounded">
+                </a>
+            </div>
+        </div>
+        <div class="row project-div">
+            <!-- Google Books Search Engine - React Project -->
+            <div class="col-md-6 col-12 container order-md-1 d-flex align-items-center justify-content-center project-text-div">
+                <div class="">
+                    <h5><i><a href="https://github.com/cyberforge1/google-books-api-search-engine" target="_blank" class="project-link"><span class="text-color-one">Google Books Search Engine</span> - React Project</a></i></h5>
+                    <br>
+                    <p>An API search engine that uses a React front-end to display data fetched from the Google Books database</p>
+                    <br>
+                    <div class="project-icons">
+                        <a href="https://github.com/cyberforge1" target="_blank">
+                            <div class="icon-container"><i class="fab fa-github-square fa-2x"></i></div>
+                        </a>
+                        <a href="https://bookquest-api-search-engine.netlify.app/" target="_blank">
+                            <div class="icon-container">
+                                <i class="fa-solid fa-link fa-2x"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-12 container order-md-2 image-container ">
+                <a href="https://bookquest-api-search-engine.netlify.app/" target="_blank">
+                    <img src="./project-screenshots/non-compressed/google-books-api-search-engine-screenshot.png" alt="Google Books API Search Engine" class="img-fluid img-rounded">
+                </a>
+            </div>
+        </div>
+        <div class="row project-div">
+            <!-- React E-commerce Store - React & Firestore Project -->
+            <div class="col-md-6 col-12 container order-md-1 d-flex align-items-center justify-content-center project-text-div">
+                <div class="">
+                    <h5><i><a href="https://github.com/cyberforge1/react-ecommerce-store" target="_blank" class="project-link"><span class="text-color-four">React E-commerce Store</span> - React & Firestore Project</a></i></h5>
+                    <br>
+                    <p>A React E-Commerce Store utilizing Google Firestore for database management and React Router for navigation</p>
+                    <br>
+                    <div class="project-icons">
+                        <a href="https://github.com/cyberforge1" target="_blank">
+                            <div class="icon-container"><i class="fab fa-github-square fa-2x"></i></div>
+                        </a>
+                        <a href="https://react-ecommerce-store-project.netlify.app/" target="_blank">
+                            <div class="icon-container">
+                                <i class="fa-solid fa-link fa-2x"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-12 container order-md-2 image-container ">
+                <a href="https://react-ecommerce-store-project.netlify.app/" target="_blank">
+                    <img src="./project-screenshots/non-compressed/react-ecommerce-screenshot.png" alt="React E-commerce Store" class="img-fluid img-rounded">
+                </a>
+            </div>
+        </div>
+        <div class="row project-div">
+            <!-- PoetryGPT - TypeScript & Python Project -->
+            <div class="col-md-6 col-12 container order-md-1 d-flex align-items-center justify-content-center project-text-div">
+                <div class="">
+                    <h5><i><a href="https://github.com/cyberforge1/poetryGPT" target="_blank" class="project-link"><span class="text-color-two">PoetryGPT</span> - TypeScript & Python Project</a></i></h5>
+                    <br>
+                    <p>A fine-tuned ChatGPT Model that responds to prompts with poetry, developed using Python and accessible through a UI built in React and Typescript</p>
+                    <br>
+                    <div class="project-icons">
+                        <a href="https://github.com/cyberforge1" target="_blank">
+                            <div class="icon-container"><i class="fab fa-github-square fa-2x"></i></div>
+                        </a>
+                        <a href="https://poetry-gpt.netlify.app/" target="_blank">
+                            <div class="icon-container">
+                                <i class="fa-solid fa-link fa-2x"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-12 container order-md-2 image-container ">
+                <a href="https://poetry-gpt.netlify.app/" target="_blank">
+                    <img src="./static/project-photos/chatgpt-fine-tune.png" alt="Fine Tuned ChatGPT" class="img-fluid img-rounded">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<div id="about-anchor" class="anchor"></div>
+
 
 
     <!-- ABOUT ME PAGE -->
@@ -402,49 +406,48 @@
         </div>
     </section>
 
+<!-- CONTACT PAGE -->
+<section id='contact' id="fifthPage" class="fifth_page flex-elements">
 
-    <!-- CONTACT PAGE -->
-    <section id='contact' id="fifthPage" class="fifth_page flex-elements">
-
-        <div class="container-fluid ">
-            <div class="row justify-content-center ">
-                <div class="col-md-4 ">
-                    <div class="text-center contact-spacing">
-                        <h2><span>Contact Me</span></h2>
-                    </div>
-                </div>
-            </div>
-            <div class="icon-spacing-2"></div>
-            <div class="row justify-content-center ">
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div class="d-flex justify-content-around">
-                        <a href="https://www.linkedin.com/in/obj809/">
-                            <div class="icon-container"><i class="fa-brands fa-linkedin fa-2x"></i></div>
-                        </a>
-                        
-                        <a href="https://github.com/cyberforge1">
-                            <div class="icon-container"><i class="fab fa-github-square fa-2x"></i></div>
-                        </a>
-                        
-                        <a href="mailto:example@example.com">
-                            <div class="icon-container"><i class="fa-solid fa-envelope fa-2x"></i></div>
-                        </a>   
-                    </div>
-                </div>
-            </div>
-            <div class="icon-spacing"></div>
-            <div class="row justify-content-center ">
-                <div class="col-lg-3 col-md-4 col-sm-6 ">
-                    <div class="d-flex justify-content-around ">
-                        <div><p><span class="text-color-one">@obj809</span></p></div>
-                        <div><p><span class="text-color-two">@cyberforge1</span></p></div>
-                        <div class="email-spacing"><p><span class="text-color-three">@obj809</span></p></div>
-                    </div>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <div class="text-center contact-spacing">
+                    <h2><span>Contact Me</span></h2>
                 </div>
             </div>
         </div>
+        <div class="icon-spacing-2"></div>
+        <div class="row justify-content-center">
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="d-flex justify-content-around">
+                    <a href="https://www.linkedin.com/in/obj809/" target="_blank">
+                        <div class="icon-container"><i class="fa-brands fa-linkedin fa-2x"></i></div>
+                    </a>
+                    
+                    <a href="https://github.com/cyberforge1" target="_blank">
+                        <div class="icon-container"><i class="fab fa-github-square fa-2x"></i></div>
+                    </a>
+                    
+                    <a href="mailto:example@example.com">
+                        <div class="icon-container"><i class="fa-solid fa-envelope fa-2x"></i></div>
+                    </a>   
+                </div>
+            </div>
+        </div>
+        <div class="icon-spacing"></div>
+        <div class="row justify-content-center">
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="d-flex justify-content-around">
+                    <div><p><span class="text-color-one">@obj809</span></p></div>
+                    <div><p><span class="text-color-two">@cyberforge1</span></p></div>
+                    <div class="email-spacing"><p><span class="text-color-three">@obj809</span></p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-    </section>
 
     <!-- FOOTER -->
         <footer>
