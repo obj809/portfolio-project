@@ -584,3 +584,58 @@ section {
   opacity: 1;
   transform: translateX(0); /* Move to original position */
 }
+
+/* ICON HIGHLIGHTING */
+
+/* Add transition for smooth background change */
+.icon-container {
+  position: relative; /* Ensure the container is positioned relative for the pseudo-element */
+  display: inline-block; /* Ensure the container behaves correctly inline */
+}
+
+/* Pseudo-element for the hover effect */
+.hover-icon-highlight::before {
+  content: ""; /* Create the pseudo-element */
+  position: absolute; /* Position it absolutely within the container */
+  top: 50%; /* Center it vertically */
+  left: 50%; /* Center it horizontally */
+  width: 150%; /* Increase width */
+  height: 150%; /* Increase height */
+  background: radial-gradient(circle, rgba(137, 152, 245, 0.4), rgba(137, 152, 245, 0) 70%); /* Radial gradient for fade-out effect */
+  transform: translate(-50%, -50%) scale(0); /* Center and hide initially */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
+  border-radius: 10px; /* Rounded corners */
+  z-index: -1; /* Ensure it sits behind the icon */
+}
+
+/* Hover effect */
+.hover-icon-highlight:hover::before {
+  transform: translate(-50%, -50%) scale(1); /* Center and show */
+}
+
+/* Project image container hover effect */
+.hover-icon-highlight {
+  position: relative; /* Ensure the container is positioned relative for the pseudo-element */
+  display: inline-block; /* Ensure the container behaves correctly inline */
+  overflow: hidden; /* Hide overflow */
+}
+
+.image-container::before {
+  content: ""; /* Create the pseudo-element */
+  position: absolute; /* Position it absolutely within the container */
+  top: 50%; /* Center it vertically */
+  left: 50%; /* Center it horizontally */
+  width: 200%; /* Increase width slightly */
+  height: 200%; /* Increase height slightly */
+  background: radial-gradient(circle, rgba(137, 152, 245, 0.4), rgba(137, 152, 245, 0) 70%); /* Radial gradient for fade-out effect */
+  transform: translate(-50%, -50%) scale(0); /* Center and hide initially */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
+  border-radius: 10px; /* Rounded corners */
+  z-index: -1; /* Ensure it sits behind the content */
+}
+
+.image-container:hover::before {
+  transform: translate(-50%, -50%) scale(1); /* Center and show */
+}
+
+
