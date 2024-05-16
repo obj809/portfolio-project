@@ -132,3 +132,25 @@ document.addEventListener("DOMContentLoaded", function() {
         emailDialog.showModal(); // Use showModal() if you want a modal dialog, or show() for a non-modal dialog
     });
 });
+
+document.addEventListener("scroll", function() {
+    var projectTitle = document.querySelector('#typed-project-title');
+    var skillsTitle = document.querySelector('#typed-skills-title');
+    var triggerHeight = window.innerHeight / 2;
+
+    if (projectTitle) {
+        if (window.scrollY + triggerHeight > projectTitle.offsetTop) {
+            projectTitle.classList.add('active');
+        } else {
+            projectTitle.classList.remove('active');
+        }
+    }
+
+    if (skillsTitle) {
+        if (window.scrollY + triggerHeight > skillsTitle.offsetTop) {
+            skillsTitle.classList.add('active');
+        } else {
+            skillsTitle.classList.remove('active');
+        }
+    }
+});

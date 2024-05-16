@@ -557,3 +557,18 @@ section {
   align-items: center;
   height: 100%;
 }
+
+
+/* Styles for the Skills section title */
+.section-title {
+  font-size: 40px;
+  opacity: 0; /* Initially hidden */
+  transform: translateX(100px); /* Start from the right, hidden */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Smooth transition */
+}
+
+/* Show the title when active */
+.section-title.active {
+  opacity: 1;
+  transform: translateX(0); /* Move to original position */
+}
