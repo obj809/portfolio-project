@@ -38,7 +38,7 @@ section {
 .first_page {
   height: 100vh;
   background-color: rgb(36,41,46);
-  background-image: url('./static/background3-cropped.png');
+  background-image: url('./static/backgrounds/background-cropped.png');
   background-size: cover; /* Cover the entire div */
   background-position: center; /* Center the background image */
   background-repeat: no-repeat; /* Do not repeat the image */
