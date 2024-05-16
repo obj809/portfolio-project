@@ -566,7 +566,12 @@ section {
 }
 
 
-/* Styles for the Skills section title */
+/* Ensure the parent container doesn't overflow */
+.container {
+  overflow: hidden;
+}
+
+/* Initial state, hidden and transformed within its container */
 .section-title {
   font-size: 40px;
   opacity: 0; /* Initially hidden */
@@ -574,7 +579,7 @@ section {
   transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Smooth transition */
 }
 
-/* Show the title when active */
+/* Active state when it should come into view */
 .section-title.active {
   opacity: 1;
   transform: translateX(0); /* Move to original position */

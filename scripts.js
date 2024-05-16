@@ -108,7 +108,7 @@ document.querySelectorAll('.navbar-nav .nav-item').forEach(item => {
 });
 
 document.addEventListener("scroll", function() {
-    var skillsTitle = document.querySelector('#skillsTitle');
+    var skillsTitle = document.querySelector('#typed-skills-title');
     if (!skillsTitle) {
         console.error('The "skillsTitle" element could not be found in the DOM.');
         return;
