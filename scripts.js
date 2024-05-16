@@ -11,9 +11,9 @@ document.addEventListener("DOMContentLoaded", function() {
             return false;
         }
         const rect = aboutMeSection.getBoundingClientRect();
+        const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
         return (
-            rect.top >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+            rect.top >= 0 && rect.top < windowHeight
         );
     }
 

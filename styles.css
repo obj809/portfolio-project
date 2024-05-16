@@ -73,7 +73,14 @@ section {
 /* Media Query to change height for screens 768px wide or less */
 @media (max-width: 768px) {
   .fourth_page {
-      height: 100vh;  /* Change the height to 100vh for smaller devices */
+      height: 115vh;  /* Change the height to 100vh for smaller devices */
+  }
+}
+
+/* Media Query to change height for screens 769px to 1024px (tablets) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .fourth_page {
+      height: 100vh;  /* Adjust this value as needed for tablet screens */
   }
 }
 
