@@ -521,3 +521,39 @@ section {
 .second-page-spacing {
   height: 100px;
 }
+
+
+
+/* Ensure the card has a relative position */
+.html-card {
+  position: relative;
+}
+
+/* Create the splash of color using an image */
+.html-card::before {
+  content: "";
+  position: absolute;
+  bottom: -125px; /* Adjust to position the splash below the card */
+  left: 50%; /* Center horizontally */
+  width: 700px;
+  height: 400px; /* Adjust height as needed */
+  background: url('./static/splash.png') no-repeat center center; /* Use the splash image */
+  background-size: contain; /* Adjust to fit the image size */
+  transform: translateX(-50%) scale(0); /* Center and hide initially */
+  transition: transform 0.3s ease-in-out; /* Smooth transition */
+  z-index: -1; /* Ensure it stays behind the card content */
+}
+
+/* Show the splash image on hover */
+.html-card:hover::before {
+  transform: translateX(-50%) scale(1); /* Center and show */
+}
+
+/* Additional styling for visibility during testing */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
