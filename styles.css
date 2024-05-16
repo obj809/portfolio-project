@@ -531,15 +531,16 @@ section {
   height: 100px;
 }
 
-
+/* SKILLS SECTION BACKGROUND IMAGES */
 
 /* Ensure the card has a relative position */
-.html-card {
+.img-background-card {
   position: relative;
+  z-index: 1; /* Default z-index */
 }
 
 /* Create the splash of color using an image */
-.html-card::before {
+.img-background-card::before {
   content: "";
   position: absolute;
   bottom: -125px; /* Adjust to position the splash below the card */
@@ -554,7 +555,11 @@ section {
 }
 
 /* Show the splash image on hover */
-.html-card:hover::before {
+.img-background-card:hover {
+  z-index: 10; /* Bring the hovered card above others */
+}
+
+.img-background-card:hover::before {
   transform: translateX(-50%) scale(1); /* Center and show */
 }
 
@@ -567,11 +572,11 @@ section {
   height: 100%;
 }
 
-
-/* Ensure the parent container doesn't overflow */
-.container {
-  overflow: hidden;
+.left-edge-card {
+  margin-left: 20px;
 }
+
+
 
 /* Initial state, hidden and transformed within its container */
 .section-title {
