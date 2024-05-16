@@ -396,8 +396,10 @@ section {
 .project-icons {
   display: flex;
   justify-content: space-evenly;
+  align-items: center;;
   width: 50%;
   margin-left: 25%;
+  height: 100px;
 }
 
 .project-text-div{
@@ -592,10 +594,12 @@ section {
   position: relative; /* Ensure the container is positioned relative for the pseudo-element */
   display: inline-block; /* Ensure the container behaves correctly inline */
 }
+
 /* Add transition for smooth background change */
 .hover-icon-highlight {
   position: relative; /* Ensure the wrapper is positioned relative for the pseudo-element */
   display: inline-block; /* Ensure the wrapper behaves correctly inline */
+  overflow: visible; /* Allow overflow to be visible */
 }
 
 /* Pseudo-element for the hover effect */
@@ -604,13 +608,13 @@ section {
   position: absolute; /* Position it absolutely within the container */
   top: 50%; /* Center it vertically */
   left: 50%; /* Center it horizontally */
-  width: 150%; /* Increase width */
-  height: 150%; /* Increase height */
+  width: 140%; /* Increase width */
+  height: 140%; /* Increase height */
   background: radial-gradient(circle, rgba(137, 152, 245, 0.4), rgba(137, 152, 245, 0) 70%); /* Radial gradient for fade-out effect */
   transform: translate(-50%, -50%) scale(0); /* Center and hide initially */
   transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
   border-radius: 10px; /* Rounded corners */
-  z-index: -1; /* Ensure it sits behind the icon */
+  z-index: 10; /* Ensure it sits above other elements */
 }
 
 /* Hover effect */
@@ -618,10 +622,6 @@ section {
   transform: translate(-50%, -50%) scale(1); /* Center and show */
 }
 
-/* Ensure the container behaves correctly inline */
-.icon-container {
-  display: inline-block;
-}
 
 /* IMAGE CONTAINER HIGHLIGHTING */
 
@@ -669,6 +669,9 @@ section {
 .icon-container {
   font-size: 22px;
   transition: transform 0.3s ease; /* Smooth transition for transform changes */
+  display: inline-block;
+  position: relative; /* Ensure the container is positioned relative for the pseudo-element */
+
 }
 
 /* Define specific highlight colors for each icon */
