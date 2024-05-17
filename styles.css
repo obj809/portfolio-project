@@ -543,80 +543,81 @@ section {
 .img-background-card::before {
   content: "";
   position: absolute;
-  bottom: -125px; /* Adjust to position the splash below the card */
+  bottom: -75px; /* Adjust to position the splash at the bottom of the card */
   left: 50%; /* Center horizontally */
-  width: 700px;
-  height: 400px; /* Adjust height as needed */
+  width: 400px; /* Set the width to 300px */
+  height: 300px; /* Set the height to 300px */
   background-size: contain; /* Adjust to fit the image size */
   transform: translateX(-50%) scale(0); /* Center and hide initially */
   transition: transform 0.3s ease-in-out; /* Smooth transition */
   z-index: -1; /* Ensure it stays behind the card content */
+  pointer-events: none; /* Prevent the pseudo-element from blocking hover */
 }
 
 
 /* Specific styles for each card with different images */
 .html-card::before {
-  background: url('./static/paint-splatters/splatter-1.png') no-repeat center center;
+  background: url('./static/paint-splatters/splatter-orange.png') no-repeat center center;
 }
 
 .css-card::before {
-  background: url('./static/paint-splatters/splatter-2.png') no-repeat center center;
+  background: url('./static/paint-splatters/splatter-purple.png') no-repeat center center;
 }
 
 .git-card::before {
-  background: url('./static/paint-splatters/splatter-3.png') no-repeat center center;
+  background: url('./static/paint-splatters/splatter-magenta-2.png') no-repeat center center;
 }
 
 .scss-card::before {
-  background: url('./static/paint-splatters/splatter-4.png') no-repeat center center;
+  background: url('./static/paint-splatters/splatter-dark-pink.png') no-repeat center center;
 }
 
 .js-card::before {
-  background: url('./static/paint-splatters/splatter-5.png') no-repeat center center;
+  background: url('./static/paint-splatters/splatter-yellow.png') no-repeat center center;
 }
 
 .react-card::before {
-  background: url('./static/paint-splatters/splatter-6.png') no-repeat center center;
+  background: url('./static/paint-splatters/splatter-light-blue.png') no-repeat center center;
 }
 
 .node-card::before {
-  background: url('./static/paint-splatters/splatter-7.png') no-repeat center center;
+  background: url('./static/paint-splatters/splatter-light-green-2.png') no-repeat center center;
 }
 
 .openai-card::before {
-  background: url('./static/paint-splatters/splatter-8.png') no-repeat center center;
+  background: url('./static/paint-splatters/splatter-magenta.png') no-repeat center center;
 }
 
 .python-card::before {
-  background: url('./static/paint-splatters/splatter-9.png') no-repeat center center;
+  background: url('./static/paint-splatters/splatter-blue.png') no-repeat center center;
 }
 
 .django-card::before {
-  background: url('./static/paint-splatters/splatter-10.png') no-repeat center center;
+  background: url('./static/paint-splatters/splatter-green.png') no-repeat center center;
 }
 
 .java-card::before {
-  background: url('./static/paint-splatters/splatter-11.png') no-repeat center center;
+  background: url('./static/paint-splatters/splatter-red-2.png') no-repeat center center;
 }
 
 .spring-card::before {
-  background: url('./static/paint-splatters/splatter-12.png') no-repeat center center;
+  background: url('./static/paint-splatters/splatter-light-green.png') no-repeat center center;
 }
 
 .mongodb-card::before {
-  background: url('./static/paint-splatters/splatter-13.png') no-repeat center center;
+  background: url('./static/paint-splatters/splatter-turquoise.png') no-repeat center center;
 }
 
 .firebase-card::before {
-  background: url('./static/paint-splatters/splatter-14.png') no-repeat center center;
+  background: url('./static/paint-splatters/splatter-red.png') no-repeat center center;
 }
 
 .aws-card::before {
-  background: url('./static/paint-splatters/splatter-15.png') no-repeat center center;
+  background: url('./static/paint-splatters/splatter-dark-purple.png') no-repeat center center;
 }
 
 .sql-card::before {
-  background: url('./static/paint-splatters/splatter-16.png') no-repeat center center;
+  background: url('./static/paint-splatters/splatter-light-pink.png') no-repeat center center;
 }
 
 
@@ -658,103 +659,7 @@ section {
   transform: translateX(0); /* Move to original position */
 }
 
-/* ICON HOVER HIGHLIGHTING */
-
-/* Add transition for smooth background change */
-.icon-container {
-  position: relative; /* Ensure the container is positioned relative for the pseudo-element */
-  display: inline-block; /* Ensure the container behaves correctly inline */
-}
-
-/* Add transition for smooth background change */
-.hover-icon-highlight {
-  position: relative; /* Ensure the wrapper is positioned relative for the pseudo-element */
-  display: inline-block; /* Ensure the wrapper behaves correctly inline */
-  overflow: visible; /* Allow overflow to be visible */
-}
-
-/* Pseudo-element for the hover effect */
-.hover-icon-highlight::before {
-  content: ""; /* Create the pseudo-element */
-  position: absolute; /* Position it absolutely within the container */
-  top: 50%; /* Center it vertically */
-  left: 50%; /* Center it horizontally */
-  width: 140%; /* Increase width */
-  height: 140%; /* Increase height */
-  background: radial-gradient(circle, rgba(137, 152, 245, 0.4), rgba(137, 152, 245, 0) 70%); /* Radial gradient for fade-out effect */
-  transform: translate(-50%, -50%) scale(0); /* Center and hide initially */
-  transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
-  border-radius: 10px; /* Rounded corners */
-  z-index: 10; /* Ensure it sits above other elements */
-}
-
-/* Hover effect */
-.hover-icon-highlight:hover::before {
-  transform: translate(-50%, -50%) scale(1); /* Center and show */
-}
 
 
-/* IMAGE CONTAINER HIGHLIGHTING */
-
-.image-container::before {
-  content: ""; /* Create the pseudo-element */
-  position: absolute; /* Position it absolutely within the container */
-  top: 50%; /* Center it vertically */
-  left: 50%; /* Center it horizontally */
-  width: 200%; /* Increase width slightly */
-  height: 200%; /* Increase height slightly */
-  background: radial-gradient(circle, rgba(137, 152, 245, 0.4), rgba(137, 152, 245, 0) 70%); /* Radial gradient for fade-out effect */
-  transform: translate(-50%, -50%) scale(0); /* Center and hide initially */
-  transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
-  border-radius: 10px; /* Rounded corners */
-  z-index: -1; /* Ensure it sits behind the content */
-}
-
-.image-container:hover::before {
-  transform: translate(-50%, -50%) scale(1); /* Center and show */
-}
 
 
-/* Constant icon highlighting */
-
-.constant-icon-highlight {
-  position: relative; /* Ensure the container is positioned relative for the pseudo-element */
-  display: inline-block; /* Ensure the container behaves correctly inline */
-  overflow: hidden; /* Hide overflow */
-}
-
-.constant-icon-highlight::before {
-  content: ""; /* Create the pseudo-element */
-  position: absolute; /* Position it absolutely within the container */
-  top: 50%; /* Center it vertically */
-  left: 50%; /* Center it horizontally */
-  width: 150%; /* Increase width */
-  height: 150%; /* Increase height */
-  background: radial-gradient(circle, var(--highlight-color), transparent 70%); /* Radial gradient for fade-out effect */
-  transform: translate(-50%, -50%) scale(1); /* Center and show initially */
-  border-radius: 10px; /* Rounded corners */
-  z-index: -1; /* Ensure it sits behind the icon */
-  transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
-}
-
-/* Remove hover state for constant highlighting */
-.icon-container {
-  font-size: 22px;
-  transition: transform 0.3s ease; /* Smooth transition for transform changes */
-  display: inline-block;
-  position: relative; /* Ensure the container is positioned relative for the pseudo-element */
-
-}
-
-/* Define specific highlight colors for each icon */
-.highlight-linkedin {
-  --highlight-color: #8998F5;
-}
-
-.highlight-github {
-  --highlight-color: #E48CF5;
-}
-
-.highlight-email {
-  --highlight-color: #957FF5;
-}
