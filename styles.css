@@ -22,6 +22,11 @@ html {
     padding: 0;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
+
 section {
   display: flex;
   justify-content: center;
@@ -112,6 +117,7 @@ section {
     align-items: center;
     width: 50%;
   }
+  
 
   .flex-elements {
     display: flex;
@@ -247,9 +253,9 @@ section {
 }
 
 /* Media query for screens smaller than 768px (common breakpoint for tablets and mobile phones) */
-@media (max-width: 768px) {
-  .project-text-div, .image-container {
-    margin-bottom: 60px;  /* Adjust the value as needed */
+@media (max-width: 600px) {
+  .image-container {
+    margin-bottom: 40px;  /* Adjust the value as needed */
   }
 }
 
@@ -265,7 +271,7 @@ section {
 
 #nameTitle {
   margin-top: 3%;
-  font-size: 40px;
+  font-size: 2.8em;
 }
 
 #jobTitle {
@@ -508,8 +514,11 @@ section {
 
 
 #typed-skills-title {
+  width: 100%;
+  box-sizing: border-box; /* Ensures padding and border are included in the element's total width */
   margin-top: 50px;
   margin-bottom: 60px;
+  overflow-x: hidden; /* Prevents any overflow in the horizontal direction */
 }
 
 #typed-project-title {
@@ -526,6 +535,12 @@ section {
 
 .section-title {
   font-size: 40px;
+}
+
+@media (max-width: 600px) {
+  .section-title {
+    font-size: 30px;
+  }
 }
 
 .no-underline {
@@ -736,11 +751,10 @@ section {
 }
 
 
-.image-container-highlight:hover{
-  color: rgb(225,228,232); /* Email red */
-  box-shadow: 0 0 5px rgb(225,228,232), 0 0 10px rgb(225,228,232), 0 0 5px rgb(225,228,232), 0 0 10px rgb(225,228,232), 0 0 5px rgb(225,228,232); /* Glow effect */
-}
-
+/* .image-container-highlight:hover{
+  color: rgb(225,228,232);
+  box-shadow: 0 0 5px rgb(225,228,232), 0 0 10px rgb(225,228,232), 0 0 5px rgb(225,228,232), 0 0 10px rgb(225,228,232), 0 0 5px rgb(225,228,232);
+} */
 
 /* ILLUMINATION */
 
@@ -754,6 +768,36 @@ section {
 /* Add this to your styles.css file */
 .constant-illuminate {
   color: #8998F5; /* Change to white color on hover */
-  filter: brightness(110%); /* Increase brightness */
+  filter: brightness(115%); /* Increase brightness */
   transition: color 0.3s ease, filter 0.3s ease; /* Smooth transition */
+}
+
+/* MOBILE NAVBAR */
+
+
+
+@media (max-width: 600px) {
+  .custom-navbar-collapse {
+    background-color: rgb(31,36,40); /* Ensure it applies only on mobile */
+    min-height: 300px; /* Set a minimum height to make the section longer */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center elements vertically */
+    align-items: center; /* Center elements horizontally */
+  }
+}
+
+.custom-navbar-collapse ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center the navbar items vertically */
+  align-items: center; /* Center the items horizontally */
+  height: 100%;
+}
+
+.custom-navbar-collapse li {
+  width: 100%;
+  text-align: center; /* Center the text */
+  margin: 10px 0; /* Add margin to create space between items */
 }

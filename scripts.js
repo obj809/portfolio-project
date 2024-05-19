@@ -122,16 +122,16 @@ document.addEventListener("scroll", function() {
     }
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-    const emailIcon = document.querySelector('.fa-envelope'); // Ensure this selects the correct element
-    const emailDialog = document.getElementById('emailDialog');
+// document.addEventListener("DOMContentLoaded", function() {
+//     const emailIcon = document.querySelector('.fa-envelope'); // Ensure this selects the correct element
+//     const emailDialog = document.getElementById('emailDialog');
 
-    emailIcon.addEventListener('click', function(event) {
-        event.preventDefault(); // Prevent the default mailto link behavior
+//     emailIcon.addEventListener('click', function(event) {
+//         event.preventDefault(); // Prevent the default mailto link behavior
 
-        emailDialog.showModal(); // Use showModal() if you want a modal dialog, or show() for a non-modal dialog
-    });
-});
+//         emailDialog.showModal(); // Use showModal() if you want a modal dialog, or show() for a non-modal dialog
+//     });
+// });
 
 document.addEventListener("scroll", function() {
     var projectTitle = document.querySelector('#typed-project-title');
@@ -156,3 +156,17 @@ document.addEventListener("scroll", function() {
 });
 
 
+
+document.addEventListener('click', function(event) {
+    var navbarCollapse = document.getElementById('navbarNav');
+    var navbarToggler = document.querySelector('.navbar-toggler');
+  
+    // Check if the click is outside the navbar and the navbar is expanded
+    if (!navbarCollapse.contains(event.target) && !navbarToggler.contains(event.target) && navbarCollapse.classList.contains('show')) {
+      // Collapse the navbar
+      var bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+        toggle: false
+      });
+      bsCollapse.hide();
+    }
+  });
