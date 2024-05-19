@@ -508,7 +508,7 @@ section {
 
 
 #typed-skills-title {
-  margin-top: 60px;
+  margin-top: 50px;
   margin-bottom: 60px;
 }
 
@@ -554,11 +554,11 @@ section {
   position: absolute;
   bottom: -75px; /* Adjust to position the splash at the bottom of the card */
   left: 50%; /* Center horizontally */
-  width: 400px; /* Set the width to 300px */
+  width: 500px; /* Set the width to 300px */
   height: 300px; /* Set the height to 300px */
   background-size: contain; /* Adjust to fit the image size */
   transform: translateX(-50%) scale(0); /* Center and hide initially */
-  transition: transform 0.3s ease-in-out; /* Smooth transition */
+  transition: transform 0.2s ease-in-out; /* Smooth transition */
   z-index: -1; /* Ensure it stays behind the card content */
   pointer-events: none; /* Prevent the pseudo-element from blocking hover */
 }
@@ -566,67 +566,67 @@ section {
 
 /* Specific styles for each card with different images */
 .html-card::before {
-  background: url('./static/paint-splatters/splatter-orange.png') no-repeat center center;
+  background: url('./static/paint-splatters/html.png') no-repeat center center;
 }
 
 .css-card::before {
-  background: url('./static/paint-splatters/splatter-purple.png') no-repeat center center;
+  background: url('./static/paint-splatters/css.png') no-repeat center center;
 }
 
 .git-card::before {
-  background: url('./static/paint-splatters/splatter-magenta-2.png') no-repeat center center;
+  background: url('./static/paint-splatters/git.png') no-repeat center center;
 }
 
 .scss-card::before {
-  background: url('./static/paint-splatters/splatter-dark-pink.png') no-repeat center center;
+  background: url('./static/paint-splatters/scss.png') no-repeat center center;
 }
 
 .js-card::before {
-  background: url('./static/paint-splatters/splatter-yellow.png') no-repeat center center;
+  background: url('./static/paint-splatters/javascript.png') no-repeat center center;
 }
 
 .react-card::before {
-  background: url('./static/paint-splatters/splatter-light-blue.png') no-repeat center center;
+  background: url('./static/paint-splatters/react.png') no-repeat center center;
 }
 
 .node-card::before {
-  background: url('./static/paint-splatters/splatter-light-green-2.png') no-repeat center center;
+  background: url('./static/paint-splatters/node.png') no-repeat center center;
 }
 
 .openai-card::before {
-  background: url('./static/paint-splatters/splatter-magenta.png') no-repeat center center;
+  background: url('./static/paint-splatters/openai.png') no-repeat center center;
 }
 
 .python-card::before {
-  background: url('./static/paint-splatters/splatter-blue.png') no-repeat center center;
+  background: url('./static/paint-splatters/python.png') no-repeat center center;
 }
 
 .django-card::before {
-  background: url('./static/paint-splatters/splatter-green.png') no-repeat center center;
+  background: url('./static/paint-splatters/django.png') no-repeat center center;
 }
 
 .java-card::before {
-  background: url('./static/paint-splatters/splatter-red-2.png') no-repeat center center;
+  background: url('./static/paint-splatters/java.png') no-repeat center center;
 }
 
 .spring-card::before {
-  background: url('./static/paint-splatters/splatter-light-green.png') no-repeat center center;
+  background: url('./static/paint-splatters/spring.png') no-repeat center center;
 }
 
 .mongodb-card::before {
-  background: url('./static/paint-splatters/splatter-turquoise.png') no-repeat center center;
+  background: url('./static/paint-splatters/mongodb.png') no-repeat center center;
 }
 
 .firebase-card::before {
-  background: url('./static/paint-splatters/splatter-red.png') no-repeat center center;
+  background: url('./static/paint-splatters/firebase.png') no-repeat center center;
 }
 
 .aws-card::before {
-  background: url('./static/paint-splatters/splatter-dark-purple.png') no-repeat center center;
+  background: url('./static/paint-splatters/aws.png') no-repeat center center;
 }
 
 .sql-card::before {
-  background: url('./static/paint-splatters/splatter-light-pink.png') no-repeat center center;
+  background: url('./static/paint-splatters/sql.png') no-repeat center center;
 }
 
 
@@ -690,7 +690,7 @@ section {
 /* LinkedIn icon */
 .linkedin-icon {
   color: #8998F5; /* LinkedIn blue */
-  box-shadow: 0 0 1px #8998F5, 0 0 1px #8998F5, 0 0 1px #8998F5, 0 0 10px #8998F5, 0 0 10px #8998F5; /* Glow effect */
+  box-shadow: 0 0 1px #8998F5, 0 0 1px #8998F5, 0 0 1px #8998F5, 0 0 12px #8998F5, 0 0 12px #8998F5; /* Glow effect */
   height: 30px;
   width: 35px;
 }
@@ -698,7 +698,7 @@ section {
 /* GitHub icon */
 .github-icon {
   color: #957FF5; /* GitHub black */
-  box-shadow: 0 0 1px #957FF5, 0 0 1px #957FF5, 0 0 1px #957FF5, 0 0 10px #957FF5, 0 0 10px #957FF5; /* Glow effect */
+  box-shadow: 0 0 1px #957FF5, 0 0 1px #957FF5, 0 0 1px #957FF5, 0 0 12px #957FF5, 0 0 12px #957FF5; /* Glow effect */
   height: 30px;
   width: 35px;
 }
@@ -706,7 +706,7 @@ section {
 /* Email icon */
 .email-icon {
   color: #BC7FF5; /* Email red */
-  box-shadow: 0 0 1px #BC7FF5, 0 0 1px #BC7FF5, 0 0 1px #BC7FF5, 0 0 10px #BC7FF5, 0 0 10px #BC7FF5; /* Glow effect */
+  box-shadow: 0 0 1px #BC7FF5, 0 0 1px #BC7FF5, 0 0 1px #BC7FF5, 0 0 12px #BC7FF5, 0 0 12px #BC7FF5; /* Glow effect */
   height: 30px;
   width: 35px;
 }
@@ -715,7 +715,7 @@ section {
 
 .highlight-linkedin {
   color: #8998F5; /* LinkedIn blue */
-  box-shadow: 0 0 1px #8998F5, 0 0 1px #8998F5, 0 0 1px #8998F5, 0 0 10px #8998F5, 0 0 10px #8998F5; /* Glow effect */
+  box-shadow: 0 0 1px #8998F5, 0 0 1px #8998F5, 0 0 1px #8998F5, 0 0 12px #8998F5, 0 0 12px #8998F5; /* Glow effect */
   height: 30px;
   width: 35px;
 }
@@ -723,14 +723,14 @@ section {
 /* GitHub icon */
 .highlight-github {
   color: #957FF5; /* GitHub black */
-  box-shadow: 0 0 1px #957FF5, 0 0 1px #957FF5, 0 0 1px #957FF5, 0 0 10px #957FF5, 0 0 10px #957FF5; /* Glow effect */
+  box-shadow: 0 0 1px #957FF5, 0 0 1px #957FF5, 0 0 1px #957FF5, 0 0 12px #957FF5, 0 0 12px #957FF5; /* Glow effect */
   height: 30px;
   width: 35px;
 }
 
 .highlight-email {
   color: #BC7FF5; /* Email red */
-  box-shadow: 0 0 1px #BC7FF5, 0 0 1px #BC7FF5, 0 0 1px #BC7FF5, 0 0 10px #BC7FF5, 0 0 10px #BC7FF5; /* Glow effect */
+  box-shadow: 0 0 1px #BC7FF5, 0 0 1px #BC7FF5, 0 0 1px #BC7FF5, 0 0 12px #BC7FF5, 0 0 12px #BC7FF5; /* Glow effect */
   height: 30px;
   width: 35px;
 }
