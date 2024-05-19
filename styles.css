@@ -208,17 +208,21 @@ section {
 
   /* DYNAMIC IMAGE RESIZING */
 
-.image-container {
+  .image-container {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .image-container img {
     width: 100%;
-    height: auto;
-    max-width: 100%;
-    max-height: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire container without stretching */
+    object-position: center; /* Center the image within the container */
+    display: block; /* Remove any default spacing */
 }
 
 
@@ -709,24 +713,47 @@ section {
 
 /* CONSTANT ICON HIGHLIGHTING */
 
-.highlight-linkedin:hover {
+.highlight-linkedin {
   color: #8998F5; /* LinkedIn blue */
-  box-shadow: 0 0 1px #8998F5, 0 0 1px #8998F5, 0 0 1px #8998F5, 0 0 15px #8998F5, 0 0 15px #8998F5; /* Glow effect */
+  box-shadow: 0 0 1px #8998F5, 0 0 1px #8998F5, 0 0 1px #8998F5, 0 0 10px #8998F5, 0 0 10px #8998F5; /* Glow effect */
   height: 30px;
   width: 35px;
 }
 
 /* GitHub icon */
-.highlight-github:hover {
+.highlight-github {
   color: #957FF5; /* GitHub black */
-  box-shadow: 0 0 1px #957FF5, 0 0 1px #957FF5, 0 0 1px #957FF5, 0 0 15px #957FF5, 0 0 15px #957FF5; /* Glow effect */
+  box-shadow: 0 0 1px #957FF5, 0 0 1px #957FF5, 0 0 1px #957FF5, 0 0 10px #957FF5, 0 0 10px #957FF5; /* Glow effect */
   height: 30px;
   width: 35px;
 }
 
-.highlight-email:hover {
+.highlight-email {
   color: #BC7FF5; /* Email red */
-  box-shadow: 0 0 1px #BC7FF5, 0 0 1px #BC7FF5, 0 0 1px #BC7FF5, 0 0 15px #BC7FF5, 0 0 15px #BC7FF5; /* Glow effect */
+  box-shadow: 0 0 1px #BC7FF5, 0 0 1px #BC7FF5, 0 0 1px #BC7FF5, 0 0 10px #BC7FF5, 0 0 10px #BC7FF5; /* Glow effect */
   height: 30px;
   width: 35px;
+}
+
+
+.image-container-highlight:hover{
+  color: rgb(225,228,232); /* Email red */
+  box-shadow: 0 0 5px rgb(225,228,232), 0 0 10px rgb(225,228,232), 0 0 5px rgb(225,228,232), 0 0 10px rgb(225,228,232), 0 0 5px rgb(225,228,232); /* Glow effect */
+}
+
+
+/* ILLUMINATION */
+
+/* Add this to your styles.css file */
+.icon-illuminate:hover {
+  color: #ffffff; /* Change to white color on hover */
+  filter: brightness(125%); /* Increase brightness */
+  transition: color 0.3s ease, filter 0.3s ease; /* Smooth transition */
+}
+
+/* Add this to your styles.css file */
+.constant-illuminate {
+  color: #8998F5; /* Change to white color on hover */
+  filter: brightness(110%); /* Increase brightness */
+  transition: color 0.3s ease, filter 0.3s ease; /* Smooth transition */
 }
