@@ -260,15 +260,18 @@ section {
 }
 
 #nameTitle {
-  margin-top: 15px;
+  margin-top: 3%;
+  font-size: 40px;
 }
 
 #jobTitle {
-  margin-top: 5px
+  margin-top: 1%;
+  font-size: 30px;
+  margin-bottom: 1%;
 }
 
 #mediaTitle {
-  margin-top: 10px;
+  margin-top: 25px;
 }
 
 #projectTitleSpacing {
@@ -390,7 +393,7 @@ section {
 }
 
 .icon-spacing-2 {
-  height: 30px;
+  margin-top: 2%;
 }
 
 .project-icons {
@@ -415,6 +418,8 @@ section {
 .icon-container {
   font-size: 20px;
   transition: transform 0.3s ease; /* Smooth transition for transform changes */
+  height: 30px;
+  width: 35px;
 }
 
 .icon-container:hover {
@@ -523,9 +528,9 @@ section {
   text-decoration: none;
 }
 
-.contact-spacing {
-  margin-top: 40px;
-}
+/* .contact-spacing {
+  margin-top: 0px;
+} */
 
 .second-page-spacing {
   height: 100px;
@@ -662,4 +667,66 @@ section {
 
 
 
+.icon-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
 
+
+
+/* ICON HIGHLIGHTING ON HOVER */
+
+.highlight-icon {
+  transition: color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for color and shadow */
+}
+
+/* LinkedIn icon */
+.linkedin-icon {
+  color: #8998F5; /* LinkedIn blue */
+  box-shadow: 0 0 1px #8998F5, 0 0 1px #8998F5, 0 0 1px #8998F5, 0 0 10px #8998F5, 0 0 10px #8998F5; /* Glow effect */
+  height: 30px;
+  width: 35px;
+}
+
+/* GitHub icon */
+.github-icon {
+  color: #957FF5; /* GitHub black */
+  box-shadow: 0 0 1px #957FF5, 0 0 1px #957FF5, 0 0 1px #957FF5, 0 0 10px #957FF5, 0 0 10px #957FF5; /* Glow effect */
+  height: 30px;
+  width: 35px;
+}
+
+/* Email icon */
+.email-icon {
+  color: #BC7FF5; /* Email red */
+  box-shadow: 0 0 1px #BC7FF5, 0 0 1px #BC7FF5, 0 0 1px #BC7FF5, 0 0 10px #BC7FF5, 0 0 10px #BC7FF5; /* Glow effect */
+  height: 30px;
+  width: 35px;
+}
+
+/* CONSTANT ICON HIGHLIGHTING */
+
+.highlight-linkedin:hover {
+  color: #8998F5; /* LinkedIn blue */
+  box-shadow: 0 0 1px #8998F5, 0 0 1px #8998F5, 0 0 1px #8998F5, 0 0 15px #8998F5, 0 0 15px #8998F5; /* Glow effect */
+  height: 30px;
+  width: 35px;
+}
+
+/* GitHub icon */
+.highlight-github:hover {
+  color: #957FF5; /* GitHub black */
+  box-shadow: 0 0 1px #957FF5, 0 0 1px #957FF5, 0 0 1px #957FF5, 0 0 15px #957FF5, 0 0 15px #957FF5; /* Glow effect */
+  height: 30px;
+  width: 35px;
+}
+
+.highlight-email:hover {
+  color: #BC7FF5; /* Email red */
+  box-shadow: 0 0 1px #BC7FF5, 0 0 1px #BC7FF5, 0 0 1px #BC7FF5, 0 0 15px #BC7FF5, 0 0 15px #BC7FF5; /* Glow effect */
+  height: 30px;
+  width: 35px;
+}
