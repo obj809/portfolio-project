@@ -1,9 +1,9 @@
 // scripts.js
 
 document.addEventListener("DOMContentLoaded", function() {
-    let typedInitialized = false; // Flag to track if Typed has been initialized
+    let typedInitialized = false;
 
-    // Function to check if the "About Me" section is in the viewport
+
     function isAboutMeVisible() {
         const aboutMeSection = document.getElementById('about');
         if (!aboutMeSection) {
@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", function() {
         );
     }
 
-    // Function to initialize Typed.js when the "About Me" section is visible
     function initTyped() {
         if (!document.querySelector("#typed-text")) {
             console.error('The "typed-text" element could not be found in the DOM.');
@@ -29,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
             backSpeed: 50,
             loop: false,
             contentType: 'html',
-            cursorChar: '_',  // Use underscore as the cursor
+            cursorChar: '_', 
             showCursor: true,
             onComplete: function(self) {
                 let cursorElement = document.querySelector('.typed-cursor');
@@ -38,18 +37,16 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             }
         });
-        typedInitialized = true; // Set the flag to true after initialization
+        typedInitialized = true;
     }
     
 
-    // Event listener for scrolling
     document.addEventListener('scroll', function() {
         if (isAboutMeVisible() && !typedInitialized) {
             initTyped();
         }
     });
 
-    // Initialize Typed.js if "About Me" is initially visible
     if (isAboutMeVisible()) {
         initTyped();
     }
@@ -80,18 +77,14 @@ document.addEventListener("scroll", function() {
 
 document.querySelectorAll('.navbar-nav .nav-item').forEach(item => {
     item.addEventListener('mouseenter', () => {
-        // Immediate previous sibling
         if (item.previousElementSibling) {
             item.previousElementSibling.classList.add('scale-small');
-            // Neighbor once removed on the left
             if (item.previousElementSibling.previousElementSibling) {
                 item.previousElementSibling.previousElementSibling.classList.add('scale-smallest');
             }
         }
-        // Immediate next sibling
         if (item.nextElementSibling) {
             item.nextElementSibling.classList.add('scale-small');
-            // Neighbor once removed on the right
             if (item.nextElementSibling.nextElementSibling) {
                 item.nextElementSibling.nextElementSibling.classList.add('scale-smallest');
             }
@@ -99,7 +92,6 @@ document.querySelectorAll('.navbar-nav .nav-item').forEach(item => {
     });
 
     item.addEventListener('mouseleave', () => {
-        // Remove 'scale-small' and 'scale-smallest' from all nav items on mouse leave
         document.querySelectorAll('.navbar-nav .nav-item').forEach(navItem => {
             navItem.classList.remove('scale-small');
             navItem.classList.remove('scale-smallest');
@@ -160,10 +152,7 @@ document.addEventListener("scroll", function() {
 document.addEventListener('click', function(event) {
     var navbarCollapse = document.getElementById('navbarNav');
     var navbarToggler = document.querySelector('.navbar-toggler');
-  
-    // Check if the click is outside the navbar and the navbar is expanded
     if (!navbarCollapse.contains(event.target) && !navbarToggler.contains(event.target) && navbarCollapse.classList.contains('show')) {
-      // Collapse the navbar
       var bsCollapse = new bootstrap.Collapse(navbarCollapse, {
         toggle: false
       });
