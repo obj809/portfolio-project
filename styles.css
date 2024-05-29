@@ -44,9 +44,9 @@ section {
   height: 100vh;
   background-color: rgb(36,41,46);
   background-image: url('./static/backgrounds/background-cropped.png');
-  background-size: cover; /* Cover the entire div */
-  background-position: center; /* Center the background image */
-  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 @media (max-width: 768px) {
@@ -75,17 +75,16 @@ section {
     border-top: 1px solid gray;
 }
 
-/* Media Query to change height for screens 768px wide or less */
+
 @media (max-width: 768px) {
   .fourth_page {
-      height: 115vh;  /* Change the height to 100vh for smaller devices */
+      height: 115vh;
   }
 }
 
-/* Media Query to change height for screens 769px to 1024px (tablets) */
 @media (min-width: 769px) and (max-width: 1024px) {
   .fourth_page {
-      height: 100vh;  /* Adjust this value as needed for tablet screens */
+      height: 100vh;
   }
 }
 
@@ -184,13 +183,13 @@ section {
 
   .flex-box {
     display: flex;
-    flex-direction: column; /* Align children side by side */
+    flex-direction: column;
     flex-wrap: nowrap;
   }
 
   .about-container {
     height: 30%;
-    margin-bottom: 30px; /* Add bottom margin */
+    margin-bottom: 30px;
   }
 
   .interest-container {
@@ -203,14 +202,8 @@ section {
 
 
 .auto-type {
-    white-space: nowrap;     /* Prevent the text from wrapping */
+    white-space: nowrap;
 }
-
-
-  /* .container {
-    : 1px solid black;
-  } */
-
 
   /* DYNAMIC IMAGE RESIZING */
 
@@ -226,9 +219,9 @@ section {
 .image-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the image covers the entire container without stretching */
-    object-position: center; /* Center the image within the container */
-    display: block; /* Remove any default spacing */
+    object-fit: cover;
+    object-position: center;
+    display: block;
 }
 
 
@@ -253,10 +246,9 @@ section {
   margin-bottom: 0%;
 }
 
-/* Media query for screens smaller than 768px (common breakpoint for tablets and mobile phones) */
 @media (max-width: 600px) {
   .image-container {
-    margin-bottom: 40px;  /* Adjust the value as needed */
+    margin-bottom: 40px;
   }
 }
 
@@ -294,18 +286,18 @@ section {
 
 .project-div, .image-container {
   opacity: 0;
-  transform: translateX(100px); /* Start from the right, hidden */
+  transform: translateX(100px);
   transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
 .project-div.active, .image-container.active {
   opacity: 1;
-  transform: translateX(0); /* Move to original position */
+  transform: translateX(0);
 }
 
 .project-link {
-  color: inherit; /* Inherits the color from its parent element */
-  text-decoration: none; /* Removes underline from links */
+  color: inherit; 
+  text-decoration: none; 
 }
 
 
@@ -313,40 +305,38 @@ section {
 
 /* Navbar Hover */
 
-/* Scaling effect for nav items */
 .navbar-nav .nav-item {
   transition: transform 0.3s ease;
 }
 
 .navbar-nav .nav-item:hover {
-  transform: scale(1.3); /* Larger scale for hovered item */
+  transform: scale(1.3); 
 }
 
-/* Immediate neighbors */
 .navbar-nav .nav-item.scale-small {
-  transform: scale(1.1); /* Smaller scale for immediate adjacent items */
+  transform: scale(1.1);
 }
 
 /* Neighbors once removed */
 .navbar-nav .nav-item.scale-smallest {
-  transform: scale(1.05); /* Even smaller scale for neighbors once removed */
+  transform: scale(1.05);
 }
 
-/* Define hover color changes for each class */
+
 .nav-link.color-one:hover {
-  color: #8998F5; /* Blue */
+  color: #8998F5;
 }
 .nav-link.color-two:hover {
-  color: #E48CF5; /* Pink */
+  color: #E48CF5;
 }
 .nav-link.color-three:hover {
-  color: #BC7FF5; /* Light purple */
+  color: #BC7FF5;
 }
 .nav-link.color-four:hover {
-  color: #957FF5; /* Dark purple */
+  color: #957FF5; 
 }
 .nav-link.color-five:hover {
-  color: #fff724; /* Yellow */
+  color: #fff724;
 }
 
 
@@ -359,13 +349,13 @@ section {
   border: 5px solid white;
   margin-bottom: 25px;
   margin-top: 0px;
-  transition: transform 0.3s ease; /* Smoothly animate the transform property */
+  transition: transform 0.3s ease;
 }
 
 
 
 .card:hover {
-  transform: scale(1.05); /* Scale up the card to 110% of its original size */
+  transform: scale(1.05);
 }
 
 .card-body {
@@ -373,22 +363,21 @@ section {
 }
 
 
-/* Project Section Image Div Magnification */
 
 .image-container {
-  transition: transform 0.3s ease-in-out; /* Smooth transition for the transform property */
-  cursor: pointer; /* Changes the cursor to a pointer to indicate that the item is interactive */
-  overflow: hidden; /* Keeps the image from spilling out of the container when scaled */
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer; 
+  overflow: hidden;
 }
 
 .image-container img {
   width: 100%;
   height: auto;
-  transition: transform 0.3s ease-in-out; /* Ensures the image also transitions smoothly */
+  transition: transform 0.3s ease-in-out;
 }
 
 .image-container:hover {
-  transform: scale(1.05); /* Scales up the container */
+  transform: scale(1.10);
 }
 
 
@@ -425,20 +414,19 @@ section {
   align-items: center;
 }
 
-/* Custom FA Styling */
+
 .icon-container {
   font-size: 20px;
-  transition: transform 0.3s ease; /* Smooth transition for transform changes */
+  transition: transform 0.3s ease;
   height: 30px;
   width: 35px;
 }
 
 .icon-container:hover {
-  transform: scale(1.3); /* Increase the size by 30% on hover */
+  transform: scale(1.3);
 }
 
 
-/* Cursor Blinking Animation */
 .typed-cursor {
   opacity: 1;
 }
@@ -449,13 +437,13 @@ section {
 }
 
 .typed-cursor.slow {
-  animation: slow-blink-animation 1s infinite !important; /* Add !important to ensure this rule has higher specificity */
+  animation: slow-blink-animation 1s infinite !important;
 }
 
 
 .navbar {
   padding: 0;
-  margin: 0; /* Make sure it covers the full width */
+  margin: 0;
 }
 
 .container-fluid {
@@ -467,37 +455,37 @@ section {
 
   @media (max-width: 576px) {
     .container {
-        padding: 10px; /* Reduce padding or margins on smaller screens */
+        padding: 10px;
     }
     .full-width {
-        width: 100%; /* Adjust widths for smaller screens */
-        box-sizing: border-box; /* Include padding and border in the element's width */
+        width: 100%;
+        box-sizing: border-box;
     }
     .navbar-nav {
-        width: 100%; /* Full width for nav items */
+        width: 100%;
     }
     .nav-item {
-        text-align: center; /* Center-align the nav items */
+        text-align: center;
     }
     .nav-link {
-        padding: 10px 15px; /* Adequate padding for clickable areas */
+        padding: 10px 15px;
     }
 }
 
 
 @media (min-width: 577px) and (max-width: 768px) {
   .full-width {
-      width: 100%; /* Ensures elements are still full-width */
-      box-sizing: border-box; /* Include padding and border in the element's width */
+      width: 100%;
+      box-sizing: border-box;
   }
   .navbar-nav {
-      width: 100%; /* Ensures nav items take full width */
+      width: 100%;
   }
   .nav-item {
-      text-align: center; /* Keeps text center-aligned */
+      text-align: center;
   }
   .nav-link {
-      padding: 12px 15px; /* Slightly larger padding than on phones */
+      padding: 12px 15px;
   }
 }
 
@@ -516,10 +504,10 @@ section {
 
 #typed-skills-title {
   width: 100%;
-  box-sizing: border-box; /* Ensures padding and border are included in the element's total width */
+  box-sizing: border-box;
   margin-top: 50px;
   margin-bottom: 60px;
-  overflow-x: hidden; /* Prevents any overflow in the horizontal direction */
+  overflow-x: hidden;
 }
 
 #typed-project-title {
@@ -528,10 +516,10 @@ section {
 
 .anchor {
   display: block;
-  height: 0;        /* No height to maintain layout flow */
-  visibility: hidden; /* Make them invisible */
-  position: relative; /* Relative positioning */
-  top: -58px;       /* Adjust this value based on your navbar's height */
+  height: 0;
+  visibility: hidden;
+  position: relative;
+  top: -58px;
 }
 
 .section-title {
@@ -548,39 +536,32 @@ section {
   text-decoration: none;
 }
 
-/* .contact-spacing {
-  margin-top: 0px;
-} */
-
 .second-page-spacing {
   height: 100px;
 }
 
 /* SKILLS SECTION BACKGROUND IMAGES */
 
-/* Ensure the card has a relative position */
 .img-background-card {
   position: relative;
-  z-index: 1; /* Default z-index */
+  z-index: 1;
 }
 
-/* Create the splash of color using an image */
 .img-background-card::before {
   content: "";
   position: absolute;
-  bottom: -75px; /* Adjust to position the splash at the bottom of the card */
-  left: 50%; /* Center horizontally */
-  width: 500px; /* Set the width to 300px */
-  height: 300px; /* Set the height to 300px */
-  background-size: contain; /* Adjust to fit the image size */
-  transform: translateX(-50%) scale(0); /* Center and hide initially */
-  transition: transform 0.2s ease-in-out; /* Smooth transition */
-  z-index: -1; /* Ensure it stays behind the card content */
-  pointer-events: none; /* Prevent the pseudo-element from blocking hover */
+  bottom: -75px;
+  left: 50%;
+  width: 500px;
+  height: 300px;
+  background-size: contain;
+  transform: translateX(-50%) scale(0);
+  transition: transform 0.2s ease-in-out;
+  z-index: -1;
+  pointer-events: none;
 }
 
 
-/* Specific styles for each card with different images */
 .html-card::before {
   background: url('./static/paint-splatters/html.png') no-repeat center center;
 }
@@ -646,16 +627,14 @@ section {
 }
 
 
-/* Show the splash image on hover */
 .img-background-card:hover {
-  z-index: 10; /* Bring the hovered card above others */
+  z-index: 10;
 }
 
 .img-background-card:hover::before {
-  transform: translateX(-50%) scale(1); /* Center and show */
+  transform: translateX(-50%) scale(1);
 }
 
-/* Additional styling for visibility during testing */
 .card-body {
   display: flex;
   flex-direction: column;
@@ -670,18 +649,16 @@ section {
 
 
 
-/* Initial state, hidden and transformed within its container */
 .section-title {
   font-size: 40px;
-  opacity: 0; /* Initially hidden */
-  transform: translateX(100px); /* Start from the right, hidden */
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Smooth transition */
+  opacity: 0;
+  transform: translateX(100px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
-/* Active state when it should come into view */
 .section-title.active {
   opacity: 1;
-  transform: translateX(0); /* Move to original position */
+  transform: translateX(0);
 }
 
 
@@ -700,85 +677,78 @@ section {
 /* ICON HIGHLIGHTING ON HOVER */
 
 .highlight-icon {
-  transition: color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for color and shadow */
+  transition: color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* LinkedIn icon */
 .linkedin-icon {
-  color: #8998F5; /* LinkedIn blue */
-  box-shadow: 0 0 1px #8998F5, 0 0 1px #8998F5, 0 0 1px #8998F5, 0 0 12px #8998F5, 0 0 12px #8998F5; /* Glow effect */
+  color: #8998F5;
+  box-shadow: 0 0 10px #8998F5, 0 0 20px #8998F5, 0 0 20px #8998F5, 0 0 20px #8998F5, 0 0 10px #8998F5; 
   height: 30px;
-  width: 35px;
+  width: 30px;
 }
 
-/* GitHub icon */
 .github-icon {
-  color: #957FF5; /* GitHub black */
-  box-shadow: 0 0 1px #957FF5, 0 0 1px #957FF5, 0 0 1px #957FF5, 0 0 12px #957FF5, 0 0 12px #957FF5; /* Glow effect */
+  color: #957FF5;
+  box-shadow: 0 0 10px #957FF5, 0 0 20px #957FF5, 0 0 20px #957FF5, 0 0 20px #957FF5, 0 0 10px #957FF5;
   height: 30px;
-  width: 35px;
+  width: 30px;
 }
 
-/* Email icon */
 .email-icon {
-  color: #BC7FF5; /* Email red */
-  box-shadow: 0 0 1px #BC7FF5, 0 0 1px #BC7FF5, 0 0 1px #BC7FF5, 0 0 12px #BC7FF5, 0 0 12px #BC7FF5; /* Glow effect */
+  color: #BC7FF5;
+  box-shadow: 0 0 10px #BC7FF5, 0 0 20px #BC7FF5, 0 0 20px #BC7FF5, 0 0 20px #BC7FF5, 0 0 10px #BC7FF5; 
   height: 30px;
-  width: 35px;
+  width: 30px;
 }
 
 /* CONSTANT ICON HIGHLIGHTING */
 
 .highlight-linkedin {
-  color: #8998F5; /* LinkedIn blue */
-  box-shadow: 0 0 1px #8998F5, 0 0 1px #8998F5, 0 0 1px #8998F5, 0 0 12px #8998F5, 0 0 12px #8998F5; /* Glow effect */
+  color: #8998F5; 
+  box-shadow: 0 0 15px #8998F5, 0 0 25px #8998F5, 0 0 30px #8998F5, 0 0 25px #8998F5, 0 0 15px #8998F5;
   height: 30px;
-  width: 35px;
+  width: 30px;
 }
 
-/* GitHub icon */
 .highlight-github {
-  color: #957FF5; /* GitHub black */
-  box-shadow: 0 0 1px #957FF5, 0 0 1px #957FF5, 0 0 1px #957FF5, 0 0 12px #957FF5, 0 0 12px #957FF5; /* Glow effect */
+  color: #957FF5;
+  box-shadow: 0 0 15px #957FF5, 0 0 25px #957FF5, 0 0 30px #957FF5, 0 0 25px #957FF5, 0 0 15px #957FF5;
   height: 30px;
-  width: 35px;
+  width: 30px;
 }
 
 .highlight-email {
-  color: #BC7FF5; /* Email red */
-  box-shadow: 0 0 1px #BC7FF5, 0 0 1px #BC7FF5, 0 0 1px #BC7FF5, 0 0 12px #BC7FF5, 0 0 12px #BC7FF5; /* Glow effect */
+  color: #BC7FF5;
+  box-shadow: 0 0 15px #BC7FF5, 0 0 25px #BC7FF5, 0 0 30px #BC7FF5, 0 0 25px #BC7FF5, 0 0 15px #BC7FF5;
   height: 30px;
-  width: 35px;
+  width: 30px;
 }
 
 
 /* ILLUMINATION */
 
-/* Add this to your styles.css file */
+
 .icon-illuminate:hover {
-  color: #ffffff; /* Change to white color on hover */
-  filter: brightness(150%); /* Increase brightness */
-  transition: color 0.3s ease, filter 0.3s ease; /* Smooth transition */
+  color: #ffffff;
+  filter: brightness(125%);
+  transition: color 0.1s ease, filter 0.1s ease;
 }
 
-/* Add this to your styles.css file */
 .constant-illuminate {
-  filter: brightness(115%); /* Increase brightness */
-  transition: color 0.3s ease, filter 0.3s ease; /* Smooth transition */
+  filter: brightness(110%);
+  transition: color 0.1s ease, filter 0.1s ease;
 }
 
 /* MOBILE NAVBAR */
 
-
-
 @media (max-width: 600px) {
   .custom-navbar-collapse {
-    background-color: rgb(31,36,40); /* Ensure it applies only on mobile */
-    min-height: 300px; /* Set a minimum height to make the section longer */
+    background-color: rgb(31,36,40);
+    min-height: 300px;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center elements vertically */
-    align-items: center; /* Center elements horizontally */
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -786,44 +756,41 @@ section {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Center the navbar items vertically */
-  align-items: center; /* Center the items horizontally */
+  justify-content: center;
+  align-items: center;
   height: 100%;
 }
 
 .custom-navbar-collapse li {
   width: 100%;
-  text-align: center; /* Center the text */
-  margin: 10px 0; /* Add margin to create space between items */
+  text-align: center;
+  margin: 10px 0;
 }
 
 
-
-/* Add this to your styles.css file */
-
 /* Project Section Image Div Highlight */
 .image-container {
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition for transform and box-shadow */
-  cursor: pointer; /* Changes the cursor to a pointer to indicate that the item is interactive */
-  overflow: hidden; /* Keeps the image from spilling out of the container when scaled */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+  overflow: hidden;
 }
 
 .image-container img {
   width: 100%;
   height: auto;
-  transition: transform 0.3s ease-in-out; /* Ensures the image also transitions smoothly */
+  transition: transform 0.3s ease-in-out;
 }
 
 .image-container:hover {
-  transform: scale(1.05); /* Scales up the container */
-  box-shadow: 0 0 30px rgba(225, 228, 232, 0.5); /* Adds a shadow effect on hover */
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgba(225, 228, 232, 0.5);
 }
 
 
 
 @media (max-width: 600px) {
   .contact-header {
-    margin-bottom: 40px; /* Adjust the value as needed for extra spacing */
+    margin-bottom: 40px;
   }
 }
 
