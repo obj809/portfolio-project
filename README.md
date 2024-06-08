@@ -9,14 +9,22 @@ This project is deployed and can be viewed [here](https://cyberforge1.github.io/
 ## Screenshot
 ![Portfolio Screenshot](project-screenshots/project-screenshot.png)
 
+
 ## Table of Contents
+- [Goals & MVP](#goals--MVP)
 - [Tech Stack](#tech-stack)
-- [Goals](#goals)
-- [How to use](#how-to-use)
-- [Implementation](#implementation)
-- [Code / Important Elements / Design Decisions](#code--important-elements--design-decisions)
-- [Issues & Bugs](#issues--bugs)
+- [Build Steps](#build-steps)
+- [Design Goals](#design-goals)
+- [Project Features](#project-features)
 - [Additions & Improvements](#additions--improvements)
+- [Learning Highlights](#learning-highlights)
+- [Known Issues](#known-issues)
+- [Challenges](#challenges)
+
+
+## Goals & MVP
+- To build a functional and visually appealing portfolio website.Practice and showcase skills in using Git, GitHub flow, SCSS, and BEM.
+
 
 ## Tech Stack
 - HTML
@@ -24,35 +32,51 @@ This project is deployed and can be viewed [here](https://cyberforge1.github.io/
 - JavaScript
 - Git
 
-## Goals
-- To build a functional and visually appealing portfolio website.
-- Practice and showcase skills in using Git, GitHub flow, SCSS, and BEM.
 
 ## How to use
 Visit the live deployment link to explore my portfolio. The website is organized into different sections including About Me, Tech Stack, Projects, and Contact.
 
-## Implementation
-- **MVP**: Includes basic functional requirements such as a landing page, about section, tech stack display, projects, and contact information.
-- **User Interface**: Utilizes SCSS and BEM for styling; responsive design achieved using CSS Grid and Flexbox.
-- **Logic Strategy**: JavaScript is employed to enhance interactivity and manage DOM elements.
 
-## Code / Important Elements / Design Decisions
-Major design decisions include the use of a clean, simple color palette and a mobile-first approach to ensure the site's responsiveness across all devices.
+## Design Goals
+- Decisions about project design
 
-## Issues & Bugs
-Currently, there are no major issues. Minor responsiveness tweaks are needed to enhance the mobile viewing experience.
+
+## Project Features
+- [x] Includes basic functional requirements such as a landing page, about section, tech stack display, projects, and contact information.
+- [x] Utilizes SCSS and BEM for styling; responsive design achieved using CSS Grid and Flexbox.
+- [x] JavaScript is employed to enhance interactivity and manage DOM elements.
+
 
 ## Additions & Improvements
-- Continuous updates to ensure smooth responsive design across all devices.
-- Regular updates to the Skill and Project sections as new technologies are learned and new projects are completed.
-- Alternating animation directions for project entries in the Project section.
-- Addition of a JavaScript game to interactively demonstrate skills with skill cards.
+- [ ] Adding an email modal to the FA email icon on activation
+- [ ] Addition of new and most recent projects 
+- [ ] Styling of the mobile NavBar section
+- [ ] Addition of a JavaScript game to interactively demonstrate skills with skill cards.
+
 
 
 ## Learning Highlights
-This project was a valuable opportunity to apply my knowledge in front-end development and to improve my proficiency with version control using Git.
+- This project was a valuable opportunity to apply my knowledge in front-end development and to improve my proficiency with version control using Git.
+
+
+## Change Logs
+List of dates and work provided
+
+
+## Known Issues
+- Currently, there are no major issues. Minor responsiveness tweaks are needed to enhance the mobile viewing experience.
+
+
+## Challenges
+- List challenges
+
 
 ## Contact Me
 - Visit my [LinkedIn](https://www.linkedin.com/in/obj809/) for more details.
 - Check out my [GitHub](https://github.com/cyberforge1) for more projects.
 - Or send me an email at obj809@gmail.com
+<br />
+Thanks for your interest in this project. Feel free to reach out with any thoughts or questions.
+<br />
+<br />
+Oliver Jenkins © 2024
