@@ -18,8 +18,6 @@ This project is deployed and can be viewed [here](https://cyberforge1.github.io/
 - [Project Features](#project-features)
 - [Additions & Improvements](#additions--improvements)
 - [Learning Highlights](#learning-highlights)
-- [Known Issues](#known-issues)
-- [Challenges](#challenges)
 
 
 ## Goals & MVP
@@ -52,7 +50,6 @@ Visit the live deployment link to explore my portfolio. The website is organized
 - [ ] Addition of new and most recent projects 
 - [ ] Styling of the mobile NavBar section
 - [ ] Addition of a JavaScript game to interactively demonstrate skills with skill cards.
-
 
 
 ## Learning Highlights
