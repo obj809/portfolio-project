@@ -59,18 +59,6 @@ Visit the live deployment link to explore my portfolio. The website is organized
 - This project was a valuable opportunity to apply my knowledge in front-end development and to improve my proficiency with version control using Git.
 
 
-## Change Logs
-List of dates and work provided
-
-
-## Known Issues
-- Currently, there are no major issues. Minor responsiveness tweaks are needed to enhance the mobile viewing experience.
-
-
-## Challenges
-- List challenges
-
-
 ## Contact Me
 - Visit my [LinkedIn](https://www.linkedin.com/in/obj809/) for more details.
 - Check out my [GitHub](https://github.com/cyberforge1) for more projects.
