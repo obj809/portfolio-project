@@ -159,7 +159,7 @@ function updateOverlayOpacity() {
     const scrollTop = window.scrollY;
 
     // Calculate the opacity based on the scroll position
-    let opacity = scrollTop / firstPageHeight;
+    let opacity = scrollTop / (firstPageHeight / 0.8); // Makes it get darker faster
 
     // Ensure opacity stays within 0 and 1
     opacity = Math.max(0, Math.min(1, opacity));
