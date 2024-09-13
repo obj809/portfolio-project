@@ -71,7 +71,7 @@ section {
 
 .fourth_page {
     height: 70vh;
-    background-color: rgb(31,36,40);
+    background-color: rgb(36,41,46);
     border-top: 1px solid gray;
 }
 
@@ -90,7 +90,7 @@ section {
 
 .fifth_page {
     height: 230px;
-    background-color: rgb(36,41,46);
+    background-color: rgb(31,36,40);
     border-top: 1px solid gray;
     border-bottom: 1px solid gray;
 }
@@ -728,7 +728,7 @@ section {
 
 .icon-illuminate:hover {
   color: #ffffff;
-  filter: brightness(125%);
+  filter: brightness(150%);
   transition: color 0.1s ease, filter 0.1s ease;
 }
 
