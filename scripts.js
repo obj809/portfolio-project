@@ -148,14 +148,40 @@ document.addEventListener("scroll", function() {
 });
 
 
+function updateOverlayOpacity() {
+    const firstPage = document.querySelector('.first_page');
+    const overlay = document.querySelector('.black-overlay');
 
+    // Get the height of the first page section
+    const firstPageHeight = firstPage.offsetHeight;
+
+    // Get the current scroll position relative to the top of the page
+    const scrollTop = window.scrollY;
+
+    // Calculate the opacity based on the scroll position
+    let opacity = scrollTop / firstPageHeight;
+
+    // Ensure opacity stays within 0 and 1
+    opacity = Math.max(0, Math.min(1, opacity));
+
+    // Apply the opacity to the overlay
+    overlay.style.opacity = opacity;
+}
+
+// Run this function when the page first loads to set the correct opacity
+document.addEventListener("DOMContentLoaded", updateOverlayOpacity);
+
+// Update the overlay opacity on scroll
+document.addEventListener("scroll", updateOverlayOpacity);
+
+// Handle navbar collapse on outside click
 document.addEventListener('click', function(event) {
-    var navbarCollapse = document.getElementById('navbarNav');
-    var navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.getElementById('navbarNav');
+    const navbarToggler = document.querySelector('.navbar-toggler');
     if (!navbarCollapse.contains(event.target) && !navbarToggler.contains(event.target) && navbarCollapse.classList.contains('show')) {
-      var bsCollapse = new bootstrap.Collapse(navbarCollapse, {
-        toggle: false
-      });
-      bsCollapse.hide();
+        const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+            toggle: false
+        });
+        bsCollapse.hide();
     }
-  });
+});
