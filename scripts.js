@@ -159,7 +159,7 @@ function updateOverlayOpacity() {
     const scrollTop = window.scrollY;
 
     // Calculate the opacity based on the scroll position
-    let opacity = scrollTop / firstPageHeight; // Makes it get darker faster
+    let opacity = scrollTop / (firstPageHeight/0.9); // Makes it get darker faster
 
     // Ensure opacity stays within 0 and 1
     opacity = Math.max(0, Math.min(1, opacity));
@@ -184,4 +184,32 @@ document.addEventListener('click', function(event) {
         });
         bsCollapse.hide();
     }
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const navbar = document.querySelector('.navbar');
+    let timeout;
+
+    // Function to show the navbar with fade-in effect
+    function showNavbar() {
+        navbar.classList.add('visible'); // Add the visible class to fade in
+
+        // Clear any existing timeout
+        clearTimeout(timeout);
+
+        // Set a timeout to hide the navbar after 3 seconds of inactivity
+        timeout = setTimeout(hideNavbar, 1000); // Adjust time as needed
+    }
+
+    // Function to hide the navbar with fade-out effect
+    function hideNavbar() {
+        navbar.classList.remove('visible'); // Remove the visible class to fade out
+    }
+
+    // Show the navbar when the user moves the mouse
+    window.addEventListener('mousemove', showNavbar);
+
+    // Initially hide the navbar after a short delay
+    timeout = setTimeout(hideNavbar, 1000);
 });

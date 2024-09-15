@@ -4,6 +4,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100..900&family=Montserrat:wght@100..900&family=Playfair+Display:wght@400..900&display=swap');
+
 
 * {
   font-family: 'Open Sans', sans-serif;
@@ -35,20 +37,67 @@ section {
   padding: 0;
 }
 
+
+#nameTitle {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 3rem;
+  color: rgb(33, 36, 41);
+}
+
+/* Apply Lato to the job title (h4) */
+#jobTitle {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400; /* Regular weight for a clean look */
+  font-size: 1.5rem; /* Adjust the size as needed */
+  color: rgb(33, 36, 41); /* Customize the color if needed */
+}
+
+
 .rounded-circle {
   border: 1.5px solid whitesmoke;
 }
 
 
+/* .first_page {
+  position: relative;
+  height: 100vh;
+  background-color: RGB(228, 233, 240);
+} */
+
+/* RGB(242, 247, 255) */
+/* RGB(228, 233, 240) */
+
+/* RGB(230, 235, 240) */
+
+.fade-in {
+  opacity: 0;
+  animation: fadeInEffect 1.5s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
 .first_page {
   position: relative;
   height: 100vh;
-  background-color: rgb(36,41,46);
-  background-image: url('./static/backgrounds/background-cropped.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: linear-gradient(to bottom, rgb(235, 240, 245), rgb(170, 175, 180)); /* Darken the bottom color */
+  opacity: 0; /* Initially hidden */
+  animation: fadeIn 1s ease-in-out forwards; /* Fade-in animation over 1s */
 }
+
+
+
+
+
+
+
 
 .black-overlay {
   position: absolute;
@@ -123,6 +172,20 @@ section {
     border-bottom: 1px solid gray;
   }
 
+
+/* Initially hidden navbar */
+.navbar {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out; /* Smooth fade in/out */
+  pointer-events: none; /* Disable interaction when hidden */
+}
+
+/* Visible navbar */
+.navbar.visible {
+  opacity: 1; /* Fully visible */
+  pointer-events: auto; /* Enable interaction */
+}
+
   .navbar-container {
     display: flex;
     justify-content: space-between;
@@ -154,6 +217,14 @@ section {
   .centered-container {
     width: 60%;
     height: 30%
+  }
+
+.title-text-color-one {
+    color: black;
+  }
+
+.title-text-color-two {
+    color: black;
   }
 
 
@@ -429,8 +500,12 @@ section {
 .icon-container {
   font-size: 20px;
   transition: transform 0.3s ease;
-  height: 30px;
-  width: 35px;
+  height: 40px;
+  width: 40px;
+  margin: 10px; /* Add spacing around each icon */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .icon-container:hover {
@@ -739,6 +814,10 @@ section {
 /* ILLUMINATION */
 
 
+.icon-illuminate i {
+    font-size: 40px; /* Adjust font size to match the new container size */
+}
+
 .icon-illuminate:hover {
   color: #ffffff;
   filter: brightness(150%);
@@ -809,4 +888,8 @@ section {
   .contact-header {
     margin-bottom: 60px;
   }
+}
+
+.icon-black {
+  color: black;
 }
