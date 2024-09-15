@@ -787,29 +787,6 @@ section {
   width: 30px;
 }
 
-/* CONSTANT ICON HIGHLIGHTING */
-
-.highlight-linkedin {
-  color: #8998F5; 
-  box-shadow: 0 0 15px #8998F5, 0 0 25px #8998F5, 0 0 30px #8998F5, 0 0 25px #8998F5, 0 0 15px #8998F5;
-  height: 30px;
-  width: 30px;
-}
-
-.highlight-github {
-  color: #957FF5;
-  box-shadow: 0 0 15px #957FF5, 0 0 25px #957FF5, 0 0 30px #957FF5, 0 0 25px #957FF5, 0 0 15px #957FF5;
-  height: 30px;
-  width: 30px;
-}
-
-.highlight-email {
-  color: #BC7FF5;
-  box-shadow: 0 0 15px #BC7FF5, 0 0 25px #BC7FF5, 0 0 30px #BC7FF5, 0 0 25px #BC7FF5, 0 0 15px #BC7FF5;
-  height: 30px;
-  width: 30px;
-}
-
 
 /* ILLUMINATION */
 
@@ -827,6 +804,11 @@ section {
 .constant-illuminate {
   filter: brightness(110%);
   transition: color 0.1s ease, filter 0.1s ease;
+}
+
+/* General Hover Styling for Icons */
+.icon-illuminate i {
+  transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* MOBILE NAVBAR */
