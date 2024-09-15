@@ -45,12 +45,11 @@ section {
   color: rgb(33, 36, 41);
 }
 
-/* Apply Lato to the job title (h4) */
 #jobTitle {
   font-family: 'Lato', sans-serif;
-  font-weight: 400; /* Regular weight for a clean look */
-  font-size: 1.5rem; /* Adjust the size as needed */
-  color: rgb(33, 36, 41); /* Customize the color if needed */
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: rgb(33, 36, 41);
 }
 
 
@@ -58,16 +57,8 @@ section {
   border: 1.5px solid whitesmoke;
 }
 
-
-/* .first_page {
-  position: relative;
-  height: 100vh;
-  background-color: RGB(228, 233, 240);
-} */
-
 /* RGB(242, 247, 255) */
 /* RGB(228, 233, 240) */
-
 /* RGB(230, 235, 240) */
 
 .fade-in {
@@ -88,16 +79,9 @@ section {
   position: relative;
   height: 100vh;
   background: linear-gradient(to bottom, rgb(235, 240, 245), rgb(190, 195, 200));
-  opacity: 0; /* Initially hidden */
-  animation: fadeIn 1s ease-in-out forwards; /* Fade-in animation over 1.5s */
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
 }
-
-
-
-
-
-
-
 
 .black-overlay {
   position: absolute;
@@ -106,9 +90,9 @@ section {
   width: 100%;
   height: 100%;
   background-color: black;
-  opacity: 0; /* Start as fully transparent */
-  pointer-events: none; /* Prevents interaction with the overlay */
-  transition: opacity 0.3s ease; /* Optional: smooth transition */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
 }
 
 @media (max-width: 768px) {
@@ -173,17 +157,15 @@ section {
   }
 
 
-/* Initially hidden navbar */
 .navbar {
   opacity: 0;
-  transition: opacity 0.5s ease-in-out; /* Smooth fade in/out */
-  pointer-events: none; /* Disable interaction when hidden */
+  transition: opacity 0.5s ease-in-out;
+  pointer-events: none;
 }
 
-/* Visible navbar */
 .navbar.visible {
-  opacity: 1; /* Fully visible */
-  pointer-events: auto; /* Enable interaction */
+  opacity: 1; 
+  pointer-events: auto;
 }
 
   .navbar-container {
@@ -227,8 +209,6 @@ section {
     color: black;
   }
 
-
-  /* TEXT STYLING */
   a {
     color: rgb(225,228,232);
     text-decoration: none;
@@ -366,8 +346,6 @@ section {
 }
 
 
-
-
 .project-div, .image-container {
   opacity: 0;
   transform: translateX(100px);
@@ -420,9 +398,6 @@ section {
 .nav-link.color-five:hover {
   color: #fff724;
 }
-
-
-
 
 
 /* Skills Section Tile Magnification */
@@ -502,7 +477,7 @@ section {
   transition: transform 0.3s ease;
   height: 40px;
   width: 40px;
-  margin: 10px; /* Add spacing around each icon */
+  margin: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -792,7 +767,7 @@ section {
 
 
 .icon-illuminate i {
-    font-size: 40px; /* Adjust font size to match the new container size */
+    font-size: 40px;
 }
 
 .icon-illuminate:hover {
@@ -806,7 +781,6 @@ section {
   transition: color 0.1s ease, filter 0.1s ease;
 }
 
-/* General Hover Styling for Icons */
 .icon-illuminate i {
   transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -840,7 +814,6 @@ section {
 }
 
 
-/* Project Section Image Div Highlight */
 .image-container {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   cursor: pointer;

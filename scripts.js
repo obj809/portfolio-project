@@ -114,17 +114,6 @@ document.addEventListener("scroll", function() {
     }
 });
 
-// document.addEventListener("DOMContentLoaded", function() {
-//     const emailIcon = document.querySelector('.fa-envelope'); // Ensure this selects the correct element
-//     const emailDialog = document.getElementById('emailDialog');
-
-//     emailIcon.addEventListener('click', function(event) {
-//         event.preventDefault(); // Prevent the default mailto link behavior
-
-//         emailDialog.showModal(); // Use showModal() if you want a modal dialog, or show() for a non-modal dialog
-//     });
-// });
-
 document.addEventListener("scroll", function() {
     var projectTitle = document.querySelector('#typed-project-title');
     var skillsTitle = document.querySelector('#typed-skills-title');
@@ -152,29 +141,21 @@ function updateOverlayOpacity() {
     const firstPage = document.querySelector('.first_page');
     const overlay = document.querySelector('.black-overlay');
 
-    // Get the height of the first page section
     const firstPageHeight = firstPage.offsetHeight;
 
-    // Get the current scroll position relative to the top of the page
     const scrollTop = window.scrollY;
 
-    // Calculate the opacity based on the scroll position
-    let opacity = scrollTop / (firstPageHeight/0.9); // Makes it get darker faster
+    let opacity = scrollTop / (firstPageHeight/0.9);
 
-    // Ensure opacity stays within 0 and 1
     opacity = Math.max(0, Math.min(1, opacity));
 
-    // Apply the opacity to the overlay
     overlay.style.opacity = opacity;
 }
 
-// Run this function when the page first loads to set the correct opacity
 document.addEventListener("DOMContentLoaded", updateOverlayOpacity);
 
-// Update the overlay opacity on scroll
 document.addEventListener("scroll", updateOverlayOpacity);
 
-// Handle navbar collapse on outside click
 document.addEventListener('click', function(event) {
     const navbarCollapse = document.getElementById('navbarNav');
     const navbarToggler = document.querySelector('.navbar-toggler');
@@ -191,25 +172,14 @@ document.addEventListener('DOMContentLoaded', function () {
     const navbar = document.querySelector('.navbar');
     let timeout;
 
-    // Function to show the navbar with fade-in effect
     function showNavbar() {
-        navbar.classList.add('visible'); // Add the visible class to fade in
-
-        // Clear any existing timeout
+        navbar.classList.add('visible');
         clearTimeout(timeout);
-
-        // Set a timeout to hide the navbar after 3 seconds of inactivity
-        timeout = setTimeout(hideNavbar, 1000); // Adjust time as needed
+        timeout = setTimeout(hideNavbar, 1500);
     }
-
-    // Function to hide the navbar with fade-out effect
     function hideNavbar() {
-        navbar.classList.remove('visible'); // Remove the visible class to fade out
+        navbar.classList.remove('visible');
     }
-
-    // Show the navbar when the user moves the mouse
     window.addEventListener('mousemove', showNavbar);
-
-    // Initially hide the navbar after a short delay
-    timeout = setTimeout(hideNavbar, 1000);
+    timeout = setTimeout(hideNavbar, 1500);
 });
