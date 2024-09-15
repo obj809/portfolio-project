@@ -87,9 +87,9 @@ section {
 .first_page {
   position: relative;
   height: 100vh;
-  background: linear-gradient(to bottom, rgb(235, 240, 245), rgb(170, 175, 180)); /* Darken the bottom color */
+  background: linear-gradient(to bottom, rgb(235, 240, 245), rgb(190, 195, 200));
   opacity: 0; /* Initially hidden */
-  animation: fadeIn 1s ease-in-out forwards; /* Fade-in animation over 1s */
+  animation: fadeIn 1s ease-in-out forwards; /* Fade-in animation over 1.5s */
 }
 
 
