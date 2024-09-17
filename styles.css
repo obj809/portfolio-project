@@ -78,7 +78,7 @@ section {
 .first_page {
   position: relative;
   height: 100vh;
-  background: linear-gradient(to bottom, rgb(235, 240, 245), rgb(190, 195, 200));
+  background: linear-gradient(to bottom, rgb(215, 220, 225), rgb(190, 195, 200));
   opacity: 0;
   animation: fadeIn 1s ease-in-out forwards;
 }
