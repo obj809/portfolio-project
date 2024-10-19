@@ -1,6 +1,6 @@
 /* Styles.css */
 
-* {
+*{
   font-family: 'Open Sans', sans-serif;
   color: rgb(225,228,232);
 }
@@ -353,24 +353,30 @@ section {
   color: #957FF5;
 }
 
-#nameTitle, #jobTitle, #mediaTitle {
-  margin-top: 1.5%;
-  line-height: 1; /* Adjust line height */
+#nameTitle, #jobTitle {
+  text-align: center; /* Keep both elements centered */
+  margin-top: 0; /* Remove unnecessary top margin */
 }
 
 #nameTitle {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 450;
-  font-size: 3em; /* Consistent size as per original */
-  color: rgb(33, 36, 41);
+  font-weight: 500; /* Slightly more bold than normal */
+  font-size: 3rem; /* Maintain the same size for prominence */
+  letter-spacing: 0.4px; /* Maintain tight spacing for clarity */
+  line-height: 1.2; /* Keep compact vertical spacing */
+  color: rgba(33, 36, 41, 0.95); /* Slightly softened black */
+  margin-bottom: 8px; /* Reduce spacing between name and job title */
 }
 
 #jobTitle {
-  font-family: 'Lato', sans-serif;
-  font-weight: 300;
-  font-size: 30px; /* Original size retained */
-  margin-bottom: 1%;
-  color: rgb(33, 36, 41);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400; /* Keep it at a regular weight */
+  font-size: 1.7rem;
+  letter-spacing: 0.3px;
+  line-height: 1.3;
+  color: rgba(33, 36, 41, 0.9);
+  margin-bottom: 16px;
+  text-shadow: 0.5px 0.5px rgba(0, 0, 0, 0.5); /* Subtle shadow */
 }
 
 .profile-picture-container {
@@ -496,6 +502,7 @@ section {
   width: 50%;
   margin-left: 25%;
   height: 100px;
+  transform: translateY(-20%);
 }
 
 .project-text-div{
