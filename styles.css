@@ -41,7 +41,7 @@ section {
 #nameTitle {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-  font-size: 3rem;
+  font-size: 2rem;
   color: rgb(33, 36, 41);
 }
 
@@ -50,6 +50,48 @@ section {
   font-weight: 400;
   font-size: 1.5rem;
   color: rgb(33, 36, 41);
+}
+/* Profile Picture Container */
+.profile-picture-container {
+  margin-bottom: 20px;
+}
+
+/* Profile Info Container - Ensures even vertical spacing */
+.profile-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 300px; /* Adjust this value based on design preference */
+  margin-top: 15px;
+}
+
+/* Name Style */
+.name-style {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 3rem;
+  color: black;
+  margin: 0; /* Remove default margin */
+}
+
+/* Job Title Style */
+.job-style {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: black;
+  margin: 0; /* Remove default margin */
+}
+
+/* Social Icons Container */
+.social-icons-container {
+  gap: 20px; /* Adds space between icons */
+}
+
+/* Icon Container - Hover Effect */
+.icon-container {
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 
@@ -80,7 +122,7 @@ section {
   height: 100vh;
   background: 
     linear-gradient(to bottom, rgba(215, 220, 225, 0.1), rgba(190, 195, 200, 0.2)), 
-    url('static/backgrounds/waves-1.png');
+    url('static/backgrounds/waves-3.png');
   background-size: cover;
   background-position: center;
   animation: fadeIn 1s ease-in-out forwards;
@@ -89,7 +131,7 @@ section {
 .first_page .col-12.container {
   position: relative;
   /* Adjust the position upward */
-  transform: translateY(-20%);
+  transform: translateY(-5%);
 }
 
 .black-overlay {
@@ -337,20 +379,20 @@ section {
 }
 
 #nameTitle {
-  margin-top: 3%;
+  margin-top: 1.5%;
   font-size: 3em;
   line-height: 1; /* Adjust line height */
 }
 
 #jobTitle {
-  margin-top: 1%;
+  margin-top: 1.5%;
   font-size: 30px;
   margin-bottom: 1%;
   line-height: 1; /* Adjust line height */
 }
 
 #mediaTitle {
-  margin-top: 25px;
+  margin-top: 1.5%;
 }
 
 #projectTitleSpacing {
