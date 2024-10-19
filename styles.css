@@ -40,14 +40,14 @@ section {
 
 #nameTitle {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
+  font-weight: 450;
   font-size: 2rem;
   color: rgb(33, 36, 41);
 }
 
 #jobTitle {
   font-family: 'Lato', sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 1.5rem;
   color: rgb(33, 36, 41);
 }
