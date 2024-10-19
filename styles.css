@@ -78,9 +78,18 @@ section {
 .first_page {
   position: relative;
   height: 100vh;
-  background: linear-gradient(to bottom, rgb(215, 220, 225), rgb(190, 195, 200));
-  opacity: 0;
+  background: 
+    linear-gradient(to bottom, rgba(215, 220, 225, 0.1), rgba(190, 195, 200, 0.2)), 
+    url('static/backgrounds/waves-1.png');
+  background-size: cover;
+  background-position: center;
   animation: fadeIn 1s ease-in-out forwards;
+}
+
+.first_page .col-12.container {
+  position: relative;
+  /* Adjust the position upward */
+  transform: translateY(-20%);
 }
 
 .black-overlay {
@@ -92,7 +101,8 @@ section {
   background-color: black;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease-in-out;
+  animation: blackOverlayFadeIn 1s 1s forwards;
 }
 
 @media (max-width: 768px) {
@@ -329,12 +339,14 @@ section {
 #nameTitle {
   margin-top: 3%;
   font-size: 3em;
+  line-height: 1; /* Adjust line height */
 }
 
 #jobTitle {
   margin-top: 1%;
   font-size: 30px;
   margin-bottom: 1%;
+  line-height: 1; /* Adjust line height */
 }
 
 #mediaTitle {
