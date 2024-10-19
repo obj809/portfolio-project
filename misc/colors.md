@@ -1,40 +1,40 @@
-MY CREATED PALETTE
-
-highlight-color-one = #BC7FF5 
-highlight-color-two = #957FF5
-highlight-color-three = #8EBCF5
-highlight-color-four = #8998F5
-highlight-color-five = #E48CF5
-highlight-color-six = #D8D1F5
-
-dark_grey = rgb(31,36,40)
-less_dark_grey = rgb(36,41,46)
 
 
-
-GITHUB THEME COLORS
-
-green = rgb(117,201,139)
-purple = rgb(136,114,183)
-blue = rgb(148,188,236)
-off-white = rgb(225,228,232)
-
-github_dark_grey = rgb(13,17,24)
-github_highlight_dark_grey = rgb(21,27,34)
+color-1 = #2F62AE - blue
+color-2 = #E48CF5 - pink
+color-3 = #BC7FF5 - light purple
+color-4 = #957FF5 - dark purple
+color-5 = #fff724 - yellow
+color-6 = #00ED64 - green
+color-7 = #87E9FF - turquoise
+color-8 = #FFFFFF -off-white
 
 
+html - off-white
+css - blue
+git - light purple
+scss - pink
+javascript - yellow
+react - turquoise 
+node - light purple
+openai - off-white
+python - blue
+django - #8998F5
+java - dark purple
+spring boot - green
+mongodb - green
+firebase - pink
+aws - yellow
+sql - dark purple
 
 
-CURRENT SELECTION
 
-dark_grey = rgb(31,36,40)
-less_dark_grey = rgb(36,41,46)
+paint-splashes to keep -
 
-primary-off-white = rgb(225,228,232); (#e1e4e8) (platinum)
-*** potential change to = #D8D1F5
+html (rotate)
+css (flip 180)
+react (flip 180)
+python (flip 180)
 
-highlight-color-one = #8998F5 (light cobalt blue)
-highlight-color-two = #E48CF5 (bright lilac)
-highlight-color-three = #BC7FF5 (lavender(floral))
-highlight-color-four = #957FF5 (medium purple)
 
+x 4
