@@ -241,6 +241,10 @@ section {
     text-decoration: none;
   }
 
+  #text-color-zero {
+    color: #ffffff;
+  }
+
   .text-color-one {
     color: #8998F5;
   }
@@ -890,4 +894,9 @@ section {
 
 .icon-black {
   color: black;
+}
+
+
+.navbar-nav .nav-link.icon-illuminate:hover {
+  color: white;
 }
