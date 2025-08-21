@@ -665,6 +665,10 @@ section {
   z-index: 10;
 }
 
+.img-background-card:hover {
+  cursor: pointer;
+}
+
 .img-background-card:hover,
 .img-background-card:focus-visible {
   transform: scale(1.05);
