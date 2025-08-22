@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./styles.css">
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js" defer></script>
     <script src="./scripts.js" defer></script>
+    <script src="./skill-game.js" defer></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/f6ed034d6e.js" crossorigin="anonymous" defer></script>
@@ -30,29 +31,18 @@
         <div class="collapse navbar-collapse text-right justify-content-center custom-navbar-collapse" id="navbarNav">
             <div class="col-md-8">
                 <ul class="navbar-nav justify-content-around">
-                    <li class="nav-item">
-                        <a class="nav-link text-color-one icon-illuminate" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link color-three icon-illuminate" href="#projects">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link color-two icon-illuminate" href="#skills">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link color-four icon-illuminate" href="#about">About Me</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link color-five icon-illuminate" href="#contact">Contact</a>
-                    </li>
-                </ul>
+                    <li class="nav-item"><a class="nav-link text-color-one icon-illuminate" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link color-three icon-illuminate" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link color-two icon-illuminate" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link color-four icon-illuminate" href="#about">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link color-five icon-illuminate" href="#contact">Contact</a></li>
+                  </ul>
             </div>
         </div>
     </div>
 </nav>
-    <div id="home" class="anchor"></div>
     <!-- LANDING PAGE -->
-<section id='home' id="firstPage" class="first_page flex-elements">
+<section id="home" class="first_page flex-elements">
     <div class="black-overlay"></div>
     <div class="col-12 container">
         <div class="row container">
@@ -96,12 +86,19 @@
         </div>
     </div>
 </section>
-    <div id="projects" class="anchor"></div>
 
 
 
 <!-- PROJECT PAGE -->
 <section id="projects" class="third_page flex-elements">
+    <button id="end-game-top"
+    class="game-exit-btn game-exit-top is-hidden"
+    type="button"
+    aria-label="End game"
+    title="End game (Esc)">
+    ✕
+    </button>
+
     <div class="container project-title">
         <div class="row project-div">
             <div id="projectTitle">
@@ -319,12 +316,10 @@
     </div>
 </section>
 
-<div id="skills" class="anchor"></div>
-
 
 
 <!-- SKILLS PAGE -->
-<section id='skills' class="second_page flex-elements">
+<section id="skills" class="second_page flex-elements">
     <div class="container skill-cards-container">
         <div class="row">
             <div class="col-12 text-center">
@@ -362,6 +357,14 @@
                         <i class="fa-brands fa-sass fa-4x"></i>
                         <p class="mt-3">SCSS/Sass</p>
                     </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card img-background-card typescript-card border">
+                <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                    <i class="fa-solid fa-code fa-4x"></i>
+                    <p class="mt-3">TypeScript</p>
+                </div>
                 </div>
             </div>
             <div class="col-md-6 col-lg-3">
@@ -404,6 +407,24 @@
                     </div>
                 </div>
             </div>
+            <!-- Flask -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card img-background-card flask-card border">
+                <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                    <i class="fa-solid fa-flask fa-4x"></i>
+                    <p class="mt-3">Flask</p>
+                </div>
+                </div>
+            </div>
+            <!-- Power BI -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card img-background-card powerbi-card border">
+                <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                    <i class="fa-solid fa-chart-column fa-4x"></i>
+                    <p class="mt-3">Power BI</p>
+                </div>
+                </div>
+            </div>
             <div class="col-md-6 col-lg-3">
                 <div class="card img-background-card java-card border">
                     <div class="card-body d-flex flex-column justify-content-center align-items-center">
@@ -428,6 +449,15 @@
                     </div>
                 </div>
             </div>
+            <!-- Terraform -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card img-background-card terraform-card border">
+                <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                    <i class="fa-solid fa-cubes fa-4x"></i>
+                    <p class="mt-3">Terraform</p>
+                </div>
+                </div>
+            </div>
             <div class="col-md-6 col-lg-3">
                 <div class="card img-background-card mongodb-card border">
                     <div class="card-body d-flex flex-column justify-content-center align-items-center">
@@ -445,14 +475,6 @@
                 </div>
             </div>
             <div class="col-md-6 col-lg-3">
-                <div class="card img-background-card aws-card border">
-                    <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                        <i class="fa-brands fa-aws fa-4x"></i>
-                        <p class="mt-3">AWS</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
                 <div class="card img-background-card sql-card border">
                     <div class="card-body d-flex flex-column justify-content-center align-items-center">
                         <i class="fa-solid fa-database fa-4x"></i>
@@ -460,10 +482,18 @@
                     </div>
                 </div>
             </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card img-background-card aws-card border">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                        <i class="fa-brands fa-aws fa-4x"></i>
+                        <p class="mt-3">AWS</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    <button id="end-game-bottom" class="game-exit-btn game-exit-bottom is-hidden" ...>✕</button>
 </section>
-    <div id="about" class="anchor"></div>
 
 
 
@@ -493,7 +523,7 @@
             <div>
             <div class="row interest-container">
                 <div class="col-md-12">
-                    <h3><i><span id="typed-text" class="auto-type"></span></i></h3>
+                    <h3><i><span id="typed-text-interests" class="auto-type"></span></i></h3>
                 </div>
             </div>
             <br>
@@ -502,8 +532,7 @@
     </section>
 
 <!-- CONTACT PAGE -->
-<section id='contact' id="fifthPage" class="fifth_page flex-elements">
-
+<section id="contact" class="fifth_page flex-elements">
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-md-4">

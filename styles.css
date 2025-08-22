@@ -37,7 +37,7 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  height: 300px; /* Adjust this value based on design preference */
+  height: 300px;
   margin-top: 15px;
 }
 
@@ -47,7 +47,7 @@ section {
   font-weight: 600;
   font-size: 3rem;
   color: black;
-  margin: 0; /* Remove default margin */
+  margin: 0;
 }
 
 /* Job Title Style */
@@ -56,12 +56,12 @@ section {
   font-weight: 400;
   font-size: 1.5rem;
   color: black;
-  margin: 0; /* Remove default margin */
+  margin: 0;
 }
 
 /* Social Icons Container */
 .social-icons-container {
-  gap: 20px; /* Adds space between icons */
+  gap: 20px;
 }
 
 /* Icon Container - Hover Effect */
@@ -129,7 +129,7 @@ section {
   }
 
 .second_page {
-    min-height: 100vh;
+    min-height: 110vh;
     background-color: rgb(31,36,40);
     border-top: 1px solid gray;
     padding-top: 25px;
@@ -358,29 +358,29 @@ section {
 }
 
 #nameTitle, #jobTitle {
-  text-align: center; /* Keep both elements centered */
-  margin-top: 0; /* Remove unnecessary top margin */
+  text-align: center;
+  margin-top: 0;
 }
 
 #nameTitle {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 500; /* Slightly more bold than normal */
-  font-size: 3rem; /* Maintain the same size for prominence */
-  letter-spacing: 0.4px; /* Maintain tight spacing for clarity */
-  line-height: 1.2; /* Keep compact vertical spacing */
-  color: rgba(33, 36, 41, 0.95); /* Slightly softened black */
-  margin-bottom: 8px; /* Reduce spacing between name and job title */
+  font-weight: 500;
+  font-size: 3rem;
+  letter-spacing: 0.4px;
+  line-height: 1.2;
+  color: rgba(33, 36, 41, 0.95);
+  margin-bottom: 8px;
 }
 
 #jobTitle {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 400; /* Keep it at a regular weight */
+  font-weight: 400;
   font-size: 1.7rem;
   letter-spacing: 0.3px;
   line-height: 1.3;
   color: rgba(33, 36, 41, 0.9);
   margin-bottom: 16px;
-  text-shadow: 0.5px 0.5px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+  text-shadow: 0.5px 0.5px rgba(0, 0, 0, 0.5);
 }
 
 .profile-picture-container {
@@ -669,11 +669,11 @@ section {
   cursor: pointer;
 }
 
-/* --- Active hover motion: TILT-POP --- */
+/* TILT-POP */
 @keyframes tilt-pop {
   0%   { transform: scale(1.05) rotate(0deg); }
-  30%  { transform: scale(1.06) rotate(0.6deg); }
-  60%  { transform: scale(1.05) rotate(-0.6deg); }
+  30%  { transform: scale(1.08) rotate(1deg); }
+  60%  { transform: scale(1.05) rotate(-1deg); }
   100% { transform: scale(1.05) rotate(0deg); }
 }
 
@@ -772,9 +772,13 @@ section {
 .aws-card     { --accent: #ffd60a; }
 .sql-card     { --accent: #4db6ac; }
 
+.flask-card { --accent: whitesmoke; }
+.terraform-card { --accent: #7B42BC; }
+.typescript-card { --accent: #3178C6; }
+.powerbi-card { --accent: #F2C811; }
+
 
 /* Old paint-splatter functionality */
-
 
 /*
 
@@ -1032,24 +1036,22 @@ section {
 
 
 
-
-
-
 /* ============================
-   Skill Tile Drag Game
+        GAME SECTION
    ============================ */
 
    #skill-game-zone {
     position: absolute;
+    top: 0;
     left: 0;
     width: 100%;
-    pointer-events: none;
     z-index: 9999;
+    pointer-events: auto;
   }
   
   .skill-drag-clone {
     position: absolute;
-    pointer-events: none;
+    pointer-events: auto;
     will-change: transform;
     transform: translate3d(0,0,0);
     box-shadow: 0 8px 30px rgba(0,0,0,0.35);
@@ -1074,17 +1076,141 @@ section {
     cursor: grabbing;
   }
   
+  .skill-drag-clone.picked-up {
+    box-shadow: 0 0 40px var(--accent), 0 0 12px rgba(255,255,255,0.25);
+  }
+  
+  body.dragging-skill .img-background-card,
+  body.dragging-skill .card {
+    pointer-events: none;
+  }
+  
+  body.dragging-skill .img-background-card:hover,
+  body.dragging-skill .img-background-card:focus-visible,
+  body.dragging-skill .card:hover {
+    transform: none !important;
+    box-shadow: none !important;
+    animation: none !important;
+  }
+  
+  .freeze-skill-layout .img-background-card,
+  .freeze-skill-layout .img-background-card:hover,
+  .freeze-skill-layout .img-background-card:focus-visible {
+    transform: none !important;
+    box-shadow: none !important;
+    animation: none !important;
+  }
+  
+  .skill-game-bounds {
+    position: absolute;
+    inset: 0;
+    box-shadow: inset 0 0 40px rgba(0,0,0,0.15);
+    opacity: 0;
+    animation: sgb-fade-in 300ms ease-out forwards;
+    pointer-events: none;
+  }
+  
+  .skill-game-bounds__label {
+    position: sticky;
+    top: 8px;
+    left: 12px;
+    display: inline-block;
+    margin: 8px 0 0 12px;
+    padding: 4px 10px;
+    background: rgba(36,41,46,0.85);
+    border: 1px solid rgba(225,228,232,0.25);
+    border-radius: 999px;
+    font-size: 12px;
+    letter-spacing: .3px;
+  }
+  
+  @keyframes sgb-fade-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  
+
+  #skill-game-zone { pointer-events: auto; overflow: hidden; }
+.skill-drag-clone { pointer-events: auto; }
+.freeze-skill-layout .img-background-card,
+.freeze-skill-layout .img-background-card:hover,
+.freeze-skill-layout .img-background-card:focus-visible {
+  transform: none !important; box-shadow: none !important; animation: none !important;
+}
+
+.skill-drag-clone {
+  position: absolute;
+  margin: 0 !important;
+  box-sizing: border-box;
+}
+
+#skill-game-zone { pointer-events: auto; overflow: hidden; }
+.skill-drag-clone { pointer-events: auto; cursor: grab; margin: 0 !important; box-sizing: border-box; position: absolute; }
+.skill-drag-clone.picked-up { cursor: grabbing; }
+
+.freeze-skill-layout .img-background-card,
+.freeze-skill-layout .img-background-card:hover,
+.freeze-skill-layout .img-background-card:focus-visible {
+  transform: none !important;
+  box-shadow: none !important;
+  animation: none !important;
+}
+
+
+
+.skill-drag-clone {
+  position: absolute;
+}
+
+.skill-drag-clone.tile-hit::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 8px;
+  pointer-events: none;
+  box-shadow:
+    0 0 0 0 var(--accent),
+    0 0 0 0 rgba(255,255,255,0.0);
+  animation: collideFlash 240ms ease-out;
+}
+
+@keyframes collideFlash {
+  0% {
+    box-shadow:
+      0 0 0 0 var(--accent),
+      0 0 0 0 rgba(255,255,255,0.0);
+    opacity: 0.85;
+  }
+  50% {
+    box-shadow:
+      0 0 22px 4px var(--accent),
+      0 0 48px 10px rgba(255,255,255,0.15);
+    opacity: 1;
+  }
+  100% {
+    box-shadow:
+      0 0 0 0 var(--accent),
+      0 0 0 0 rgba(255,255,255,0.0);
+    opacity: 0.9;
+  }
+}
+
 
 .skill-drag-clone.picked-up {
-  box-shadow: 0 0 40px var(--accent), 0 0 12px rgba(255,255,255,0.25);
+  box-shadow:
+    0 0 28px 6px var(--accent),
+    0 0 60px 16px rgba(255, 255, 255, 0.12);
 }
 
+
+#skill-game-zone .skill-drag-clone.picked-up {
+  box-shadow:
+    0 0 28px 6px var(--accent),
+    0 0 60px 16px rgba(255, 255, 255, 0.12) !important;
+  z-index: 10001;
+}
 
 body.dragging-skill .img-background-card,
-body.dragging-skill .card {
-  pointer-events: none;
-}
-
 body.dragging-skill .img-background-card:hover,
 body.dragging-skill .img-background-card:focus-visible,
 body.dragging-skill .card:hover {
@@ -1092,3 +1218,47 @@ body.dragging-skill .card:hover {
   box-shadow: none !important;
   animation: none !important;
 }
+.is-hidden { display: none !important; }
+
+#projects, #skills { position: relative; }
+
+.game-exit-btn {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  border: 1px solid rgba(225,228,232,0.35);
+  background: rgba(36,41,46,0.75);
+  color: rgba(225,228,232,0.9);
+  font-size: 18px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0.35;
+  transition: opacity 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+  backdrop-filter: blur(2px);
+  z-index: 10002;
+  pointer-events: auto;
+}
+
+.game-exit-btn {
+  opacity: 0.5;
+  background: rgba(36,41,46,0.85);
+  border: 1px solid rgba(225,228,232,0.5);
+  color: rgba(255,255,255,0.95);
+}
+
+.game-exit-btn:hover,
+.game-exit-btn:focus-visible {
+  opacity: 0.95;
+  transform: scale(1.06);
+  box-shadow: 0 0 20px rgba(225,228,232,0.35);
+  outline: none;
+}
+
+.game-exit-top {    top: 25px;   right: 25px; }
+.game-exit-bottom { bottom: 25px; right: 25px; }
+
+.is-hidden { display: none !important; }
