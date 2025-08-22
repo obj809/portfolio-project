@@ -669,6 +669,60 @@ section {
   cursor: pointer;
 }
 
+/* --- Active hover motion: TILT-POP --- */
+@keyframes tilt-pop {
+  0%   { transform: scale(1.05) rotate(0deg); }
+  30%  { transform: scale(1.06) rotate(0.6deg); }
+  60%  { transform: scale(1.05) rotate(-0.6deg); }
+  100% { transform: scale(1.05) rotate(0deg); }
+}
+
+.img-background-card:hover,
+.img-background-card:focus-visible {
+  box-shadow: 0 0 40px var(--accent);
+  cursor: pointer;
+  animation: tilt-pop 0.5s ease-out;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .img-background-card:hover,
+  .img-background-card:focus-visible {
+    animation: none;
+  }
+}
+
+/* ----------------------------------------------------------------
+   Alternative motions (commented for easy swapping):
+   To use one, replace "tilt-pop" in the hover rule above
+-------------------------------------------------------------------
+
+@keyframes breathe {
+  0%, 100% { transform: scale(1.05); }
+  50%      { transform: scale(1.07); }
+}
+
+@keyframes nod {
+  0%   { transform: scale(1.05) rotateX(0deg); }
+  50%  { transform: scale(1.05) rotateX(3deg); }
+  100% { transform: scale(1.05) rotateX(0deg); }
+}
+
+@keyframes rock {
+  0%   { transform: scale(1.05) rotate(0deg); }
+  25%  { transform: scale(1.05) rotate(0.5deg); }
+  75%  { transform: scale(1.05) rotate(-0.5deg); }
+  100% { transform: scale(1.05) rotate(0deg); }
+}
+
+@keyframes sway {
+  0%   { transform: scale(1.05) rotate(0deg); }
+  50%  { transform: scale(1.05) rotate(0.4deg); }
+  100% { transform: scale(1.05) rotate(-0.4deg); }
+}
+
+*/
+
 .img-background-card:hover,
 .img-background-card:focus-visible {
   transform: scale(1.05);
@@ -974,4 +1028,67 @@ section {
 
 .navbar-nav .nav-link.icon-illuminate:hover {
   color: white;
+}
+
+
+
+
+
+
+/* ============================
+   Skill Tile Drag Game
+   ============================ */
+
+   #skill-game-zone {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+    z-index: 9999;
+  }
+  
+  .skill-drag-clone {
+    position: absolute;
+    pointer-events: none;
+    will-change: transform;
+    transform: translate3d(0,0,0);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+    border-radius: 6px;
+    transition: none !important;
+    animation: none !important;
+  }
+  
+  .skill-drag-clone * {
+    transition: none !important;
+    animation: none !important;
+  }
+  
+  .skill-original-ghost {
+    opacity: 0;
+    visibility: hidden;
+    transition: none;
+  }
+  
+  body.dragging-skill {
+    user-select: none;
+    cursor: grabbing;
+  }
+  
+
+.skill-drag-clone.picked-up {
+  box-shadow: 0 0 40px var(--accent), 0 0 12px rgba(255,255,255,0.25);
+}
+
+
+body.dragging-skill .img-background-card,
+body.dragging-skill .card {
+  pointer-events: none;
+}
+
+body.dragging-skill .img-background-card:hover,
+body.dragging-skill .img-background-card:focus-visible,
+body.dragging-skill .card:hover {
+  transform: none !important;
+  box-shadow: none !important;
+  animation: none !important;
 }
