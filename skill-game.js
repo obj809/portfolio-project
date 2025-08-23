@@ -20,9 +20,9 @@
     building: false,
     zone: null,
     clonesByOriginal: new Map(),
-    localPos: new WeakMap(),     // clone -> { x, y, w, h }
-    velocity: new WeakMap(),     // clone -> { vx, vy }
-    drag: null,                  // { clone, offsetX, offsetY, lastX, lastY, vx, vy, lastT }
+    localPos: new WeakMap(),
+    velocity: new WeakMap(),
+    drag: null,
     anim: { running: false, lastT: 0 }
   };
 
