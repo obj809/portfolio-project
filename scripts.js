@@ -1,173 +1,136 @@
 // scripts.js
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
+  const qs  = (sel, root = document) => root.querySelector(sel);
+  const qsa = (sel, root = document) => [...root.querySelectorAll(sel)];
+  const on  = (el, ev, fn, opts) => el && el.addEventListener(ev, fn, opts);
+  const raf  = (fn) => requestAnimationFrame(fn);
 
-    let typedInitialized = false;
-  
-    function isAboutMeVisible() {
-      const aboutMeSection = document.getElementById("about");
-      if (!aboutMeSection) {
-        console.error('The "About Me" section could not be found in the DOM.');
-        return false;
-      }
-      const rect = aboutMeSection.getBoundingClientRect();
-      const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-      return rect.top >= 0 && rect.top < windowHeight;
-    }
-  
-    function initTyped() {
-      const target = document.querySelector("#typed-text");
-      if (!target) {
-        console.error('The "typed-text" element could not be found in the DOM.');
-        return;
-      }
-      new Typed("#typed-text", {
-        strings: [
-          '<span class="text-color-off-white">Nice to meet you, I\'m </span><span class="text-color-five">Oliver. </span>',
-        ],
-        typeSpeed: 75,
-        backSpeed: 50,
-        loop: false,
-        contentType: "html",
-        cursorChar: "_",
-        showCursor: true,
-        onComplete: function () {
-          const cursorElement = document.querySelector(".typed-cursor");
-          if (cursorElement) cursorElement.classList.add("slow");
-        },
-      });
-      typedInitialized = true;
-    }
-  
-    function checkTypedVisibility() {
-      if (!typedInitialized && isAboutMeVisible()) {
-        initTyped();
-      }
-    }
-  
-    checkTypedVisibility();
-    document.addEventListener("scroll", checkTypedVisibility, { passive: true });
-  
-    function toggleActive(el, shouldActivate) {
-      if (document.body.classList.contains("game-active")) return;
-      if (shouldActivate) el.classList.add("active");
-      else el.classList.remove("active");
-    }
-  
-    function updateSlideIns() {
-      const trigger = window.innerHeight * 0.5;
-  
-      const projectDivs = document.querySelectorAll(".project-div");
-      const imageContainers = document.querySelectorAll(".image-container");
-      const projectTitle = document.querySelector("#typed-project-title");
-      const skillsTitle = document.querySelector("#typed-skills-title");
-  
-      projectDivs.forEach((div) => {
-        const top = div.getBoundingClientRect().top;
-        toggleActive(div, top < trigger);
-      });
-  
-      imageContainers.forEach((el) => {
-        const top = el.getBoundingClientRect().top;
-        toggleActive(el, top < trigger);
-      });
-  
-      if (projectTitle) {
-        const top = projectTitle.getBoundingClientRect().top;
-        toggleActive(projectTitle, top < trigger);
-      }
-      if (skillsTitle) {
-        const top = skillsTitle.getBoundingClientRect().top;
-        toggleActive(skillsTitle, top < trigger);
-      }
-    }
-  
-    let _slideTick = false;
-    function onScrollForSlideIns() {
-      if (_slideTick) return;
-      _slideTick = true;
-      requestAnimationFrame(() => {
-        updateSlideIns();
-        _slideTick = false;
-      });
-    }
-  
-    window.addEventListener("load", updateSlideIns);
-    window.addEventListener("resize", updateSlideIns);
-    document.addEventListener("scroll", onScrollForSlideIns, { passive: true });
-  
-    window.addEventListener("game:end", updateSlideIns);
+  const $aboutSection   = qs("#about");
+  const $typedTarget    = qs("#typed-text");
+  const $projectTitle   = qs("#typed-project-title");
+  const $skillsTitle    = qs("#typed-skills-title");
+  const $firstPage      = qs(".first_page");
+  const $overlay        = qs(".black-overlay");
+  const $navbar         = qs(".navbar");
+  const $navbarCollapse = qs("#navbarNav");
+  const $navbarToggler  = qs(".navbar-toggler");
 
-    document.querySelectorAll(".navbar-nav .nav-item").forEach((item) => {
-      item.addEventListener("mouseenter", () => {
-        if (item.previousElementSibling) {
-          item.previousElementSibling.classList.add("scale-small");
-          if (item.previousElementSibling.previousElementSibling) {
-            item.previousElementSibling.previousElementSibling.classList.add("scale-smallest");
-          }
-        }
-        if (item.nextElementSibling) {
-          item.nextElementSibling.classList.add("scale-small");
-          if (item.nextElementSibling.nextElementSibling) {
-            item.nextElementSibling.nextElementSibling.classList.add("scale-smallest");
-          }
-        }
-      });
-  
-      item.addEventListener("mouseleave", () => {
-        document.querySelectorAll(".navbar-nav .nav-item").forEach((navItem) => {
-          navItem.classList.remove("scale-small", "scale-smallest");
-        });
-      });
+  let typedStarted = false;
+  function initTypedOnce() {
+    if (typedStarted || !$typedTarget) return;
+    if (typeof Typed !== "function") return;
+    new Typed("#typed-text", {
+      strings: [
+        '<span class="text-color-off-white">Nice to meet you, I\'m </span><span class="text-color-five">Oliver. </span>',
+      ],
+      typeSpeed: 75,
+      backSpeed: 50,
+      loop: false,
+      contentType: "html",
+      cursorChar: "_",
+      showCursor: true,
+      onComplete: () => {
+        const cur = qs(".typed-cursor");
+        if (cur) cur.classList.add("slow");
+      },
     });
-  
+    typedStarted = true;
+  }
 
-    function updateOverlayOpacity() {
-      const firstPage = document.querySelector(".first_page");
-      const overlay = document.querySelector(".black-overlay");
-      if (!firstPage || !overlay) return;
-  
-      const firstPageHeight = firstPage.offsetHeight;
-      const scrollTop = window.scrollY || window.pageYOffset || 0;
+  if ($aboutSection) {
+    const aboutObserver = new IntersectionObserver(
+      (entries) => entries.forEach((e) => { if (e.isIntersecting) initTypedOnce(); }),
+      { root: null, threshold: 0.1 }
+    );
+    aboutObserver.observe($aboutSection);
+  }
 
-      let opacity = scrollTop / (firstPageHeight / 0.9);
-      opacity = Math.max(0, Math.min(1, opacity));
-      overlay.style.opacity = opacity;
+  function toggleActive(el, shouldActivate) {
+    const inSkills = !!el.closest("#skills");
+    if (inSkills && document.body.classList.contains("game-active")) return;
+    el.classList.toggle("active", !!shouldActivate);
+  }
+
+  function updateSlideIns() {
+    const trigger = window.innerHeight * 0.5;
+    const slideEls = [
+      ...qsa(".project-div"),
+      ...qsa(".image-container"),
+    ];
+    slideEls.forEach((el) => {
+      const top = el.getBoundingClientRect().top;
+      toggleActive(el, top < trigger);
+    });
+    if ($projectTitle) {
+      toggleActive($projectTitle, $projectTitle.getBoundingClientRect().top < trigger);
     }
-  
-    updateOverlayOpacity();
-    document.addEventListener("scroll", updateOverlayOpacity, { passive: true });
-  
-    document.addEventListener("click", function (event) {
-      const navbarCollapse = document.getElementById("navbarNav");
-      const navbarToggler = document.querySelector(".navbar-toggler");
-      if (!navbarCollapse || !navbarToggler) return;
-  
-      const clickedInsideCollapse = navbarCollapse.contains(event.target);
-      const clickedToggler = navbarToggler.contains(event.target);
-      const isOpen = navbarCollapse.classList.contains("show");
-  
-      if (!clickedInsideCollapse && !clickedToggler && isOpen) {
-        const bsCollapse = new bootstrap.Collapse(navbarCollapse, { toggle: false });
-        bsCollapse.hide();
+    if ($skillsTitle) {
+      toggleActive($skillsTitle, $skillsTitle.getBoundingClientRect().top < trigger);
+    }
+  }
+
+  let ticking = false;
+  function onScrollTick() {
+    if (ticking) return;
+    ticking = true;
+    raf(() => { updateSlideIns(); updateOverlayOpacity(); ticking = false; });
+  }
+
+  on(window, "load",  updateSlideIns);
+  on(window, "resize", updateSlideIns);
+  on(document, "scroll", onScrollTick, { passive: true });
+  on(window, "game:end", updateSlideIns);
+
+  function updateOverlayOpacity() {
+    if (!$firstPage || !$overlay) return;
+    const firstPageHeight = $firstPage.offsetHeight || 1;
+    const scrollTop = window.scrollY || 0;
+    let opacity = scrollTop / (firstPageHeight / 0.9);
+    $overlay.style.opacity = Math.max(0, Math.min(1, opacity));
+  }
+
+  updateOverlayOpacity();
+
+  qsa(".navbar-nav .nav-item").forEach((item) => {
+    on(item, "mouseenter", () => {
+      const prev = item.previousElementSibling;
+      const next = item.nextElementSibling;
+      if (prev) {
+        prev.classList.add("scale-small");
+        if (prev.previousElementSibling) prev.previousElementSibling.classList.add("scale-smallest");
+      }
+      if (next) {
+        next.classList.add("scale-small");
+        if (next.nextElementSibling) next.nextElementSibling.classList.add("scale-smallest");
       }
     });
-  
-    (function setupAutoHideNavbar() {
-      const navbar = document.querySelector(".navbar");
-      if (!navbar) return;
-  
-      let timeout;
-      function showNavbar() {
-        navbar.classList.add("visible");
-        clearTimeout(timeout);
-        timeout = setTimeout(hideNavbar, 1500);
-      }
-      function hideNavbar() {
-        navbar.classList.remove("visible");
-      }
-      window.addEventListener("mousemove", showNavbar);
-      timeout = setTimeout(hideNavbar, 1500);
-    })();
+    on(item, "mouseleave", () => {
+      qsa(".navbar-nav .nav-item").forEach((n) => n.classList.remove("scale-small", "scale-smallest"));
+    });
   });
-  
+
+  on(document, "click", (evt) => {
+    if (!$navbarCollapse || !$navbarToggler) return;
+    const isOpen = $navbarCollapse.classList.contains("show");
+    if (!isOpen) return;
+    const clickedInside = $navbarCollapse.contains(evt.target);
+    const clickedToggler = $navbarToggler.contains(evt.target);
+    if (!clickedInside && !clickedToggler) {
+      const bsCollapse = new bootstrap.Collapse($navbarCollapse, { toggle: false });
+      bsCollapse.hide();
+    }
+  });
+
+  (function setupAutoHideNavbar() {
+    if (!$navbar) return;
+    let hideTimer;
+    const showNavbar = () => {
+      $navbar.classList.add("visible");
+      clearTimeout(hideTimer);
+      hideTimer = setTimeout(() => $navbar.classList.remove("visible"), 1500);
+    };
+    on(window, "mousemove", showNavbar);
+    setTimeout(() => $navbar.classList.remove("visible"), 1500);
+  })();
+});
