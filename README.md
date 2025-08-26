@@ -8,7 +8,6 @@ This project is deployed and can be viewed [here](https://cyberforge1.github.io/
 
 ## Screenshot & Demo
 ![Portfolio Screenshot](project-screenshots/project-screenshot.png)
-![Demo](./assets/skill_tiles_capture.gif)
 
 
 ## Table of Contents
@@ -46,12 +45,17 @@ Visit the live deployment link to explore my portfolio. The website is organized
 - [x] Utilizes SCSS and BEM for styling; responsive design achieved using CSS Grid and Flexbox.
 - [x] JavaScript is employed to enhance interactivity and manage DOM elements.
 
+## Skills Section JavaScript Game
+![Demo](./assets/skill_tiles_capture.gif)
+
+
 
 ## Additions & Improvements
 - [ ] Adding an email modal to the FA email icon on activation
 - [ ] Addition of new and most recent projects 
 - [ ] Styling of the mobile NavBar section
-- [ ] Addition of a JavaScript game to interactively demonstrate skills with skill cards.
+- [X] Addition of a JavaScript game to interactively demonstrate skills with skill cards.
+
 
 
 ## Learning Highlights
