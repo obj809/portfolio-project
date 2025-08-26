@@ -42,7 +42,7 @@ Visit the live deployment link to explore my portfolio. The website is organized
 - [x] JavaScript is employed to enhance interactivity and manage DOM elements.
 
 ## JavaScript Game
-![Demo](./assets/skill_tiles_capture.gif)
+![Demo](./assets/skill_tiles_capture-min_compressed)
 
 
 ## Additions & Improvements
