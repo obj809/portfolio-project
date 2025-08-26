@@ -33,11 +33,7 @@ This project is deployed and can be viewed [here](https://cyberforge1.github.io/
 
 
 ## How to use
-Visit the live deployment link to explore my portfolio. The website is organized into different sections including About Me, Tech Stack, Projects, and Contact.
-
-
-## Design Goals
-- Decisions about project design
+Visit the live deployment link to explore my portfolio. The website is organized into different sections including About Me, Projects, Skills, and Contact.
 
 
 ## Project Features
@@ -47,7 +43,6 @@ Visit the live deployment link to explore my portfolio. The website is organized
 
 ## JavaScript Game
 ![Demo](./assets/skill_tiles_capture.gif)
-
 
 
 ## Additions & Improvements
