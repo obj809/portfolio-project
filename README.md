@@ -6,8 +6,9 @@ This is my personal portfolio website, designed to showcase my skills and projec
 ## Deployment Link
 This project is deployed and can be viewed [here](https://cyberforge1.github.io/portfolio-project/).
 
-## Screenshot
+## Screenshot & Demo
 ![Portfolio Screenshot](project-screenshots/project-screenshot.png)
+![Demo](./assets/skill_tiles_capture.gif)
 
 
 ## Table of Contents
