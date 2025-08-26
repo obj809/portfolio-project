@@ -7,7 +7,7 @@ This is my personal portfolio website, designed to showcase my skills and projec
 This project is deployed and can be viewed [here](https://cyberforge1.github.io/portfolio-project/).
 
 ## Screenshot & Demo
-![Portfolio Screenshot](project-screenshots/project-screenshot.png)
+![Portfolio Screenshot](project-screenshots/project_screenshot.png)
 
 
 ## Table of Contents
@@ -45,7 +45,7 @@ Visit the live deployment link to explore my portfolio. The website is organized
 - [x] Utilizes SCSS and BEM for styling; responsive design achieved using CSS Grid and Flexbox.
 - [x] JavaScript is employed to enhance interactivity and manage DOM elements.
 
-## Skills Section JavaScript Game
+## JavaScript Game
 ![Demo](./assets/skill_tiles_capture.gif)
 
 
