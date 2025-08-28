@@ -4,7 +4,7 @@
 This is my personal portfolio website, designed to showcase my skills and projects as a junior software developer. The site features a responsive design, applying best practices in HTML, CSS, and JavaScript.
 
 ## Deployment Link
-This project is deployed and can be viewed [here](https://cyberforge1.github.io/portfolio-project/).
+This project is deployed and can be viewed [here](https://obj809.github.io/portfolio-project/).
 
 ## Screenshot & Demo
 ![Portfolio Screenshot](project-screenshots/project_screenshot.png)
@@ -59,7 +59,7 @@ Visit the live deployment link to explore my portfolio. The website is organized
 
 ## Contact Me
 - Visit my [LinkedIn](https://www.linkedin.com/in/obj809/) for more details.
-- Check out my [GitHub](https://github.com/cyberforge1) for more projects.
+- Check out my [GitHub](https://github.com/obj809) for more projects.
 - Or send me an email at obj809@gmail.com
 <br />
 Thanks for your interest in this project. Feel free to reach out with any thoughts or questions.

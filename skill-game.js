@@ -1,6 +1,5 @@
 // skill-game.js
 
-
 (function () {
   const MIN_WIDTH       = 768;
   const BOUNCE_WALL     = 0.85;
