@@ -6,7 +6,7 @@ This is my personal portfolio website, designed to showcase my skills and projec
 ## Deployment Link
 This project is deployed and can be viewed [here](https://obj809.github.io/portfolio-project/).
 
-## Screenshot & Demo
+## Project Screenshot
 ![Portfolio Screenshot](project-screenshots/project_screenshot.png)
 
 
