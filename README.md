@@ -31,7 +31,6 @@ This project is deployed and can be viewed [here](https://obj809.github.io/portf
 - Git
 
 
-
 ## How to use
 Visit the live deployment link to explore my portfolio. The website is organized into different sections including About Me, Projects, Skills, and Contact.
 
