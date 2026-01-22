@@ -1189,6 +1189,9 @@ section {
     font-size: 12px;
     letter-spacing: .3px;
   }
+
+  .skill-game-bounds__label:empty { display: none !important; }
+
   
   @keyframes sgb-fade-in {
     from { opacity: 0; }
@@ -1278,7 +1281,7 @@ section {
   }
   
   .game-exit-top { top: 25px; right: 25px; }
-  .game-exit-bottom { bottom: 25px; right: 25px; }
+  .game-exit-bottom { top: 25px; right: 25px; }
   
   .project-div,
   .image-container {
