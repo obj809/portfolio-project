@@ -782,6 +782,8 @@ section {
 .firebase-card  { --accent: #FFB300; }
 .aws-card     { --accent: #ffd60a; }
 .sql-card     { --accent: #4db6ac; }
+.go-card {--accent: #00ADD8;
+}
 
 .flask-card { --accent: whitesmoke; }
 .terraform-card { --accent: #7B42BC; }
