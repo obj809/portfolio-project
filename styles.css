@@ -776,7 +776,7 @@ section {
 .openai-card  { --accent: #10a37f; }
 .python-card  { --accent: #3776ab; }
 .java-card { --accent: #E76F00; }
-.spring-card  { --accent: #6db33f; }
+.firebase-card  { --accent: #FFB300; }
 .docker-card { --accent: #0db7ed; }
 .mongodb-card { --accent: #13aa52; }
 .supabase-card { --accent: #3ECF8E; }
