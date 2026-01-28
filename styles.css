@@ -779,7 +779,7 @@ section {
 .spring-card  { --accent: #6db33f; }
 .docker-card { --accent: #0db7ed; }
 .mongodb-card { --accent: #13aa52; }
-.firebase-card  { --accent: #FFB300; }
+.supabase-card { --accent: #3ECF8E; }
 .aws-card     { --accent: #ffd60a; }
 .sql-card     { --accent: #4db6ac; }
 .go-card {--accent: #00ADD8;
