@@ -4,7 +4,7 @@
 This is my personal portfolio website, designed to showcase my skills and projects as a junior software developer. The site features a responsive design, applying best practices in HTML, CSS, and JavaScript.
 
 ## Deployment Link
-This project is deployed and can be viewed [here](https://obj809.github.io/portfolio-project/).
+This project is deployed and can be viewed [here](oliverjenkins.com.au).
 
 ## Project Screenshot
 ![Portfolio Screenshot](project-screenshots/project_screenshot.png)
