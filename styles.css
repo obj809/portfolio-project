@@ -773,7 +773,7 @@ section {
 }
 
 
-.html-card { --accent: #FFA726; }
+.html-card { --accent: #E34F26; }
 .css-card     { --accent: #264de4; }
 .git-card     { --accent: #f14e32; }
 .scss-card    { --accent: #cc6699; }
@@ -781,21 +781,32 @@ section {
 .react-card   { --accent: #61dafb; }
 .node-card    { --accent: #3c873a; }
 .openai-card  { --accent: #10a37f; }
+.claude-card  { --accent: #D97757; }
 .python-card  { --accent: #3776ab; }
 .java-card { --accent: #E76F00; }
 .firebase-card  { --accent: #FFB300; }
 .docker-card { --accent: #0db7ed; }
 .mongodb-card { --accent: #13aa52; }
 .supabase-card { --accent: #3ECF8E; }
-.aws-card     { --accent: #ffd60a; }
+.aws-card     { --accent: #FF9900; }
 .sql-card     { --accent: #4db6ac; }
 .go-card {--accent: #00ADD8;
 }
 
-.flask-card { --accent: whitesmoke; }
+.fastapi-card { --accent: #009688; }
 .terraform-card { --accent: #7B42BC; }
 .typescript-card { --accent: #3178C6; }
 .powerbi-card { --accent: #F2C811; }
+
+/* Claude mark: masks the solid-black icons8 PNG with a light gray to match the other icons */
+.claude-icon {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+  background-color: #D1D5DA;
+  -webkit-mask: url("./static/icons/claude-icon.png") center / contain no-repeat;
+  mask: url("./static/icons/claude-icon.png") center / contain no-repeat;
+}
 
 
 /* Old paint-splatter functionality */
